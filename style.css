@@ -4,6 +4,15 @@ body {
     font-family: Inter, ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+#toggledark {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+}
+
 #vxnuajtxt {
 font-size: 45px;
 
@@ -30,6 +39,7 @@ position: relative;
     top: 150px;
     left: -430px;
 }
+
 
 .bsc-instagram-social{
     position: relative;
