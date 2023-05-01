@@ -1,7 +1,70 @@
 const toggle = document.getElementById('toggleDark');
 const body = document.querySelector('body');
-const waitxt = document.querySelector('#waitxt');
+const waitxt = document.querySelector('#waitxt')
 const interesttxt = document.querySelector('#interesttxt');
+const buildingTxt = document.getElementById("buildingtxt");
+const mindlab = document.getElementById("mindlab");
+
+window.addEventListener("load", function() {
+  mindlab.style.display = "none";
+  mindlab.style.opacity = "0";
+});
+
+window.addEventListener("load", function() {
+  distanceproject.style.display = "none";
+  distanceproject.style.opacity = "0";
+});
+
+window.addEventListener("load", function() {
+  photonicpropulsion.style.display = "none";
+  photonicpropulsion.style.opacity = "0";
+});
+
+window.addEventListener("load", function() {
+  planet.style.stroke = "black";
+});
+
+buildingTxt.addEventListener("click", function() {
+  if (mindlab.style.display === "none") {
+    mindlab.style.display = "block";
+    setTimeout(function() {
+      mindlab.style.opacity = "1";
+    }, 0);
+  } else {
+    mindlab.style.opacity = "0";
+    setTimeout (function() {
+      mindlab.style.display = "none";
+    }, 400);
+  }
+});
+
+buildingTxt.addEventListener("click", function() {
+  if (distanceproject.style.display === "none") {
+    distanceproject.style.display = "block";
+    setTimeout(function() {
+      distanceproject.style.opacity = "1";
+    }, 0);
+  } else {
+    distanceproject.style.opacity = "0";
+    setTimeout (function() {
+      distanceproject.style.display = "none";
+    }, 400);
+  }
+});
+
+buildingTxt.addEventListener("click", function() {
+  if (photonicpropulsion.style.display === "none") {
+    photonicpropulsion.style.display = "block";
+    setTimeout(function() {
+      photonicpropulsion.style.opacity = "1";
+    }, 0);
+  } else {
+    photonicpropulsion.style.opacity = "0";
+    setTimeout (function() {
+      photonicpropulsion.style.display = "none";
+    }, 400);
+  }
+});
 
 waitxt.addEventListener('animationend', function() {
     interesttxt.style.animation = 'typing 3.5s steps(55), cursor .4s step-end infinite alternate';
@@ -28,8 +91,13 @@ toggle.addEventListener('click', function() {
       document.querySelector ('#buildingtxt').style.border = '2px solid white';
       document.querySelector ('.sidebar').style.border = '2px solid white';
       document.querySelector ('#mindlab').style.border = '2px solid white';
+      document.querySelector ('#distanceproject').style.border = '2px solid white';
+      document.querySelector ('#photonicpropulsion').style.border = '2px solid white';
       document.querySelector ('#mindlabbrain').style.fill = 'white';
+      document.querySelector ('#runfast').style.fill = 'white';
+      document.querySelector ('#planet').style.stroke = 'white';
       document.querySelector ('#linkclick').style.fill = 'white';
+      document.querySelector ('#linkclick2').style.fill = 'white';
       document.querySelectorAll('.socialicons svg').forEach(function(icon) {
         icon.style.fill = 'white';
         icon.style.transition = '.25s';
@@ -49,8 +117,13 @@ toggle.addEventListener('click', function() {
       document.querySelector ('#buildingtxt').style.border = '2px solid black';
       document.querySelector ('.sidebar').style.border = '2px solid black';
       document.querySelector ('#mindlab').style.border = '2px solid black';
+      document.querySelector ('#photonicpropulsion').style.border = '2px solid black';
       document.querySelector ('#mindlabbrain').style.fill = 'black';
+      document.querySelector ('#distanceproject').style.border = '2px solid black';
+      document.querySelector ('#runfast').style.fill = 'black';
+      document.querySelector ('#planet').style.stroke = 'black';
       document.querySelector ('#linkclick').style.fill = 'black';
+      document.querySelector ('#linkclick2').style.fill = 'black';
       document.querySelectorAll('.socialicons svg').forEach(function(icon) {
         icon.style.fill = 'black';
         icon.style.transition = '.25s';
