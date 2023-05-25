@@ -7,12 +7,13 @@ body {
     overflow: scroll;
 }
 
+
 #toggleDark{
     font-size: 25px;
     cursor: pointer;
     position: absolute;
-    top: 15px;
-    left: 570px;
+    top: 0px;
+    left: 690px;
     transition: .1s;
 }
 
@@ -21,19 +22,82 @@ body {
 }
 
 #navbar {
-    position: absolute;
-    left: 415px;
-    top: 110px;
+    width: 500px;
+    display: inline;
+    position: relative;
+    left: 405px;
+    top: 90px;
     font-weight: 400;
     color: inherit;
 
 }
 
+.projhov {
+    text-align: center;
+    box-sizing: border-box;
+    background-color: inherit;
+    border: inherit;
+    position: relative;
+    padding-right: 30px;
+
+}
+
+.navtxt {
+    text-align: center;
+    box-sizing: border-box;
+    background-color: inherit;
+    border: inherit;
+    position: relative;
+    padding-right: 30px;
+}
+
+.projdrop {
+    position: relative;
+}
+
+.projectmen {
+    width: 53px;
+    height: 53px;
+    position: absolute;
+    top: 17px;
+    left: 3px;
+    text-align: left;
+    padding: 0px;
+    font-size: 13px;
+    z-index: 1;
+    padding-top: 8px;
+    pointer-events: none;
+}
+
+.projdrop:hover .projectmen{
+    display: block;
+    pointer-events: auto;
+}
+
+.projdrop:hover .projectmen a{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.projectmen a{
+    line-height: 25px;
+    position: relative;
+    top: -2px;
+    left: -2px;
+    padding: 0px;
+    opacity: 0;
+    transition: ease-in-out opacity 0.3s;
+    pointer-events: none;
+}
+
+
 li {
     list-style: none;
     display: inline-block;
-    padding-right: 30px;
+    padding-right: 0px;
     transition: .1s;
+    left: 0px;
+    text-align: center;
 }
 
 li:hover {
@@ -48,33 +112,53 @@ ul{
 #vxnuajtxt {
 font-size: 45px;
 position: relative;
-left: 450px;
-top: 180px;
+left: 445px;
+top: 107px;
 }
 
-#omdtxt{
+#buildingtxt{
     font-size: 40px;
-position: relative;
+position: absolute;
 left: 450px;
-top: 180px;
+top: 150px;
+overflow: show;
+}
+
+#omdp{
+    font-size: 16px;
+    position: absolute;
+    width: 294px;
+    font-weight: 400;
+    top: 50px;
+    transition: .1s;
 }
 
 #archivetxt{
     font-size: 40px;
-position: relative;
+position: absolute;
 left: 450px;
-top: 180px;
+top: 144px;
+overflow: show;
+}
+
+#archivep{
+    font-size: 16px;
+    position: absolute;
+    width: 294px;
+    font-weight: 400;
+    top: 50px;
 }
 
 #synthexiacrd {
     position: absolute;
-    left: 470px;
-    top: 370px;
-    width: 200px;
-    height: 200px;
+    left: 0px;
+    top: 105px;
+    width: 560px;
+    height: 80px;
     border-radius: 20px;
     overflow: hidden;
-    background-color: rgb(255, 255, 255);
+    background-color: inherit;
+    border: 1px solid #1E2938;
     z-index:5;
     transition: .1s;
 }
@@ -88,43 +172,216 @@ top: 180px;
 }
 
 #synthexiatxt{
-    font-size: 18px;
-    font-weight: 500;
-    text-align: center;
-    position: relative;
-    top: 104px;
+    font-size: 16px;
+    font-weight: 650;
+    text-align: left;
+    position: absolute;
+    left: 85px;
     z-index: 1;
 }
 
 #synthexiabody{
-    font-size: 12px;
-    text-align: center;
-    position: relative;
-    top: 95px;
+    font-size: 15px;
+    text-align: left;
+    left: 85px;
+    position: absolute;
+    top: 28px;
+    font-style: italic;
+    font-weight: 400;
 }
 
 #synthexiaimg{
-    position: relative;
-    top: -135px;
-    left: -10px;
-    height: 150px;
+    position: absolute;
+    top: 14px;
+    left: 5px;
+    height: 50px;
     filter: brightness(100%);
-
+    width: 75px;
+    object-fit: cover;
+    border-radius: 15px;
 }
 
-#synthexiaimgsh {
-    position: relative;
-    top: 215px;
-    left: 452px;
-    height: 180px;
-    width: 180px;
-    filter: brightness(100%);
+#ahcrd{
+    position: absolute;
+    left: 0px;
+    top: 200px;
+    width: 560px;
+    height: 80px;
     border-radius: 20px;
-    filter: blur(10px);
+    overflow:hidden;
+    background-color: inherit;
+    border: 1px solid #1E2938;
+    z-index:5;
+    transition: .1s; 
+}
+
+#ahcrd:hover{
+    transform: scale(1.04);
+}
+
+#ahtxt{
+    font-size: 16px;
+    font-weight: 650;
+    text-align: left;
+    position: absolute;
+    left: 85px;
+    z-index: 1;
+}
+
+#ahbody {
+    font-size: 15px;
+    text-align: left;
+    left: 85px;
+    position: absolute;
+    top: 28px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#ahimg{
+    position: absolute;
+    top: -5px;
+    left: -2.5px;
+    height: 90px;
+    filter: brightness(100%);
+    width: 90px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+#ppcrd{
+    position: absolute;
+    left: 0px;
+    top: 200px;
+    width: 560px;
+    height: 80px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: inherit;
+    border: 1px solid #1E2938;
+    z-index:5;
+    transition: .1s; 
+}
+
+#ppcrd:hover{
+    transform: scale(1.04);
+}
+
+#pptxt{
+    font-size: 16px;
+    font-weight: 650;
+    text-align: left;
+    position: absolute;
+    left: 85px;
+    z-index: 1;
+}
+#ppbody{
+    font-size: 15px;
+    text-align: left;
+    left: 85px;
+    position: absolute;
+    top: 28px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#ppimg{
+    height: 70px;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+}
+
+#dpcrd{
+    position: absolute;
+    left: 0px;
+    top: 105px;
+    width: 560px;
+    height: 80px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: inherit;
+    border: 1px solid #1E2938;
+    z-index:5;
     transition: .1s;
 }
 
+#dpcrd:hover {
+    transform: scale(1.04);
+}
 
+#dptxt{
+    font-size: 16px;
+    font-weight: 650;
+    text-align: left;
+    position: absolute;
+    left: 85px;
+    z-index: 1;
+}
+
+#dpbody{
+    font-size: 15px;
+    text-align: left;
+    left: 85px;
+    position: absolute;
+    top: 28px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#dpimg{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+}
+
+#pwcrd{
+    position: absolute;
+    left: 0px;
+    top: 295px;
+    width: 560px;
+    height: 80px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: inherit;
+    border: 1px solid #1E2938;
+    z-index:5;
+    transition: .1s;
+}
+
+#pwcrd:hover {
+    transform: scale(1.04);
+}
+
+#pwtxt{
+    font-size: 16px;
+    font-weight: 650;
+    text-align: left;
+    position: absolute;
+    left: 85px;
+    z-index: 1;
+}
+
+#pwbody{
+    font-size: 15px;
+    text-align: left;
+    left: 85px;
+    position: absolute;
+    top: 28px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+#pwimg{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+}
 
 #side {
     position: absolute;
@@ -146,11 +403,18 @@ top: 180px;
     height: 600px;
     left: 80px;
     border-radius: 40px;
-    border-width: 2.5px;
     overflow: hidden;
     transition: .2s;
-    filter: blur(15px);
+    filter: blur(10px);
     opacity: 70%;
+    background: transparent;
+    backdrop-filter: blur(0px);
+}
+
+#sideimg2{
+    position: absolute;
+    height: 600px;
+    left: -60px;
 }
 
 #sideimg {
@@ -164,8 +428,8 @@ top: 180px;
 
 #waitxt {
     position: relative;
-    left: 450px;
-    top: 180px;
+    left: 445px;
+    top: 110px;
     font-size: 18px;
     width: 420px;
     white-space: nowrap;
@@ -178,8 +442,8 @@ top: 180px;
 
 #interesttxt {
     position: relative;
-    left: 450px;
-    top: 200px;
+    left: 445px;
+    top: 125px;
     font-size: 18px;
     width: 500px;
     white-space: nowrap;
@@ -190,8 +454,8 @@ top: 180px;
 
 #lifetxt {
     position: relative;
-    left: 450px;
-    top: 220px;
+    left: 445px;
+    top: 140px;
     font-size: 18px;
     width: 370px;
     border-right: 3px solid rgba(0,0,0,0);
@@ -202,8 +466,8 @@ top: 180px;
 }
 #runtxt {
     position: relative;
-    left: 450px;
-    top: 240px;
+    left: 445px;
+    top: 155px;
     font-size: 18px;
     width: 125px;
     white-space: nowrap;
@@ -233,7 +497,7 @@ position: relative;
 
 .socialicons {
     position: relative;
-    top: 290px;
+    top: 230px;
     left: 450px;
 }
 

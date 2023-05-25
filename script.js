@@ -13,6 +13,7 @@ toggle.addEventListener('click', function() {
       body.style.background = 'black';
       body.style.color = 'white';
       body.style.transition = '.25s';
+
       function playSound(audioName) {
         let audio = new Audio (audioName);
         audio.loop=false;
@@ -21,16 +22,28 @@ toggle.addEventListener('click', function() {
         audio.duration = .07;
     }
     playSound("switch-20.wav")
-      
+  
       document.querySelectorAll('.socialicons svg').forEach(function(icon) {
         icon.style.fill = 'white';
         icon.style.transition = '.25s';
         
       });
+      omdp.style.color='#9CA3AF'
+      synthexiacrd.style.color ='white'
+      synthexiacrd.style.background='black'
+      ahcrd.style.color = 'white'
+      ahcrd.style.background = 'black'
+      dpcrd.style.color = 'white'
+      dpcrd.style.background = 'black'
+      ppcrd.style.color = 'white'
+      ppcrd.style.background = 'black'
+      pwcrd.style.color = 'white'
+      pwcrd.style.background = 'black'
     } else {
       body.style.background = 'white';
       body.style.color = 'black';
       body.style.transition = '.25s';
+    
       function playSound(audioName) {
         let audio = new Audio (audioName);
         audio.loop=false;
@@ -40,10 +53,22 @@ toggle.addEventListener('click', function() {
     }
     playSound("switch-20.wav")
     
+    
       document.querySelectorAll('.socialicons svg').forEach(function(icon) {
         icon.style.fill = 'black';
         icon.style.transition = '.25s';
       });
+      omdp.style.color='black'
+      synthexiacrd.style.color ='black'
+      synthexiacrd.style.background='white'
+      ahcrd.style.color = 'black'
+      ahcrd.style.background = 'white'
+      dpcrd.style.color = 'black'
+      dpcrd.style.background = 'white'
+      ppcrd.style.color = 'black'
+      ppcrd.style.background = 'white'
+      pwcrd.style.color = 'black'
+      pwcrd.style.background = 'white'
     }
   });
 
