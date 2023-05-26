@@ -4,7 +4,7 @@ const waitxt = document.querySelector('#waitxt')
 const interesttxt = document.querySelector('#interesttxt');
 const buildingTxt = document.getElementById("buildingtxt");
 
-
+const sicon = document.getElementById("sicon");
 
 
 toggle.addEventListener('click', function() {
@@ -22,12 +22,19 @@ toggle.addEventListener('click', function() {
         audio.duration = .07;
     }
     playSound("switch-20.wav")
+
+    
   
       document.querySelectorAll('.socialicons svg').forEach(function(icon) {
         icon.style.fill = 'white';
         icon.style.transition = '.25s';
-        
       });
+      document.querySelectorAll('.socialicons2 svg').forEach(function(icon) {
+        icon.style.fill = 'white';
+        icon.style.transition = '.25s';
+      });
+      
+
       omdp.style.color='#9CA3AF'
       synthexiacrd.style.color ='white'
       synthexiacrd.style.background='black'
@@ -39,7 +46,8 @@ toggle.addEventListener('click', function() {
       ppcrd.style.background = 'black'
       pwcrd.style.color = 'white'
       pwcrd.style.background = 'black'
-    } else {
+    } 
+    else {
       body.style.background = 'white';
       body.style.color = 'black';
       body.style.transition = '.25s';
@@ -53,11 +61,16 @@ toggle.addEventListener('click', function() {
     }
     playSound("switch-20.wav")
     
+    document.querySelectorAll('.socialicons svg').forEach(function(icon) {
+      icon.style.fill = 'black';
+      icon.style.transition = '.25s';
+    });
     
-      document.querySelectorAll('.socialicons svg').forEach(function(icon) {
-        icon.style.fill = 'black';
-        icon.style.transition = '.25s';
-      });
+    document.querySelectorAll('.socialicons2 svg').forEach(function(icon) {
+      icon.style.fill = 'black';
+      icon.style.transition = '.25s';
+    });
+
       omdp.style.color='black'
       synthexiacrd.style.color ='black'
       synthexiacrd.style.background='white'
@@ -69,7 +82,9 @@ toggle.addEventListener('click', function() {
       ppcrd.style.background = 'white'
       pwcrd.style.color = 'black'
       pwcrd.style.background = 'white'
+      
     }
+  
   });
 
   waitxt.addEventListener('animationend', function() {

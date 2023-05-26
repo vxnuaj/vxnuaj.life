@@ -24,7 +24,7 @@ body {
 #navbar {
     width: 500px;
     display: inline;
-    position: relative;
+    position: fixed;
     left: 405px;
     top: 90px;
     font-weight: 400;
@@ -111,9 +111,9 @@ ul{
 }
 #vxnuajtxt {
 font-size: 45px;
-position: relative;
+position: absolute;
 left: 445px;
-top: 107px;
+top: 143px;
 }
 
 #buildingtxt{
@@ -384,9 +384,9 @@ overflow: show;
 }
 
 #side {
-    position: absolute;
+    position: fixed;
     top: 90px;
-    width: 260px;
+    width: 255px;
     height: 600px;
     left: 100px;
     border-radius: 40px;
@@ -394,12 +394,19 @@ overflow: show;
     overflow: hidden;
     transition: .1s;
     z-index: 1;
+    overflow: show;
+    border: 1.75px solid #1e293898;
+    ;
+}
+
+#sideimg {
+    height: 100%;
 }
 
 #sideimgsh{
-    position: absolute;
-    top: 110px;
-    width: 260px;
+    position: fixed;
+    top: 120px;
+    width: 255px;
     height: 600px;
     left: 80px;
     border-radius: 40px;
@@ -414,22 +421,64 @@ overflow: show;
 #sideimg2{
     position: absolute;
     height: 600px;
-    left: -60px;
+    left: -1px;
+    top: -3px;
+    filter: brightness(200%);
+    border: 1.75px solid #1e293898;
+    width: 255px;
+    border-radius: 40px;
+    object-fit: cover;
 }
 
-#sideimg {
-    height: 100%;
+
+#sideimgsh2{
+    position: fixed;
+    top: 110px;
+    width: 260px;
+    height: 590px;
+    left: 90px;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: .2s;
+    filter: brightness(110%)blur(5px);
+    background: transparent;
+    backdrop-filter: blur(5px);
 }
+
+#sideimg3{
+    position: absolute;
+    height: 600px;
+    left: -1px;
+    top: -3px;
+    border: 1.75px solid #1e293898;
+    width: 255px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+#sideimg4 {
+    position: absolute;
+    height: 600px;
+    left: -1px;
+    top: -3px;
+    border: 1.75px solid #1e293898;
+    width: 255px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+
 
 #side:hover {
-    transform: scale(1.08);
+    transform: scale(1.02);
 }
+
 
 
 #waitxt {
     position: relative;
-    left: 445px;
-    top: 110px;
+    left: 440px;
+    top: 240px;
     font-size: 18px;
     width: 420px;
     white-space: nowrap;
@@ -442,8 +491,8 @@ overflow: show;
 
 #interesttxt {
     position: relative;
-    left: 445px;
-    top: 125px;
+    left: 440px;
+    top: 255px;
     font-size: 18px;
     width: 500px;
     white-space: nowrap;
@@ -454,8 +503,8 @@ overflow: show;
 
 #lifetxt {
     position: relative;
-    left: 445px;
-    top: 140px;
+    left: 440px;
+    top: 270px;
     font-size: 18px;
     width: 370px;
     border-right: 3px solid rgba(0,0,0,0);
@@ -466,8 +515,8 @@ overflow: show;
 }
 #runtxt {
     position: relative;
-    left: 445px;
-    top: 155px;
+    left: 440px;
+    top: 285px;
     font-size: 18px;
     width: 125px;
     white-space: nowrap;
@@ -497,11 +546,47 @@ position: relative;
 
 .socialicons {
     position: relative;
-    top: 230px;
-    left: 450px;
+    top: 350px;
+    left: 40px;
 }
 
+.socialicons2{
+fill: inherit;
+   z-index: 2;
+}
 
+.sicon{
+    position: fixed;
+    top: 660px;
+    left: 460px;
+    border: 1px solid #1E2938;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 4px;
+    border-radius: 20px;
+    width: 230px;
+    height: 27px;
+    background-color:inherit;
+    z-index: 5;
+    backdrop-filter: blur(1.5px);
+    overflow: show;
+}
+
+.bi-bi-house-fill {
+    position: relative;
+    top: 0px;
+    left: -9px;
+    height: 20px;
+    width: 25px;
+}
+
+.vl{
+    border-left: 1.5px solid #1E2938;
+    position: absolute;
+    height: 20px;
+    left: 53px;
+    top: 10px;
+}
 
 
 a:link { text-decoration: none; 
