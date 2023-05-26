@@ -559,9 +559,12 @@ position: relative;
 }
 
 .socialicons2{
-fill: inherit;
+    fill: inherit;
    z-index: 2;
    animation: fade-down .5s;
+   position: absolute;
+   width: 180px;
+   left: 24px;
 }
 
 .sicon{
@@ -573,7 +576,7 @@ fill: inherit;
     padding-top: 10px;
     padding-bottom: 4px;
     border-radius: 20px;
-    width: 230px;
+    width: 220px;
     height: 27px;
     background-color:inherit;
     z-index: 5;
@@ -592,17 +595,78 @@ fill: inherit;
 
 .bi-bi-linkedin{
  position: relative;
- left: 3px
+ left: -4px
 }
 
 .vl{
     border-left: 1.5px solid #1E2938;
     position: absolute;
     height: 20px;
-    left: 53px;
-    top: 10px;
+    left: 28px;
+    top: 2px;
 }
 
+
+#statuscon {
+    position: absolute;
+    left: 445px;
+    top: 420px;
+    color: inherit;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    animation: fade-down .2s;
+}
+
+#statuscon p{
+    position: relative;
+    left: 0px;
+    font-size: 13px;
+    top: -6px;
+}
+
+#msgme{
+    text-underline-offset: 1.75px;
+    transition: text-decoration .25s ease-in-out;
+    text-decoration: underline solid transparent;
+
+}
+
+#msgme:hover {
+    color: #9CA3AF;
+    transition: .25s;
+    text-decoration: underline solid #9CA3AF ;
+}
+
+
+
+#wifiicon{
+    position: absolute;
+    top: 6.5px;
+    left: 5px;
+    animation: fade-down .2s;
+}
+
+
+#bottomlinks{
+    position: fixed;
+    left: 445px;
+    top: 550px;
+    font-style: oblique 10deg;
+}
+#bottomlinks a{
+    padding-right: 20px;
+    text-decoration: underline solid transparent;
+    text-underline-offset: 2px;
+    animation: fade-down .2s;
+
+}
+
+#bottomlinks a:hover{
+    color: #9CA3AF;
+    text-decoration: underline solid #9CA3AF;
+    transition: .3s;
+}
 
 a:link { text-decoration: none; 
 color: inherit;}
@@ -630,3 +694,88 @@ a:active { text-decoration: none;
     }
     }
 
+/* music from lastfm+apple music /*/
+
+    .now-playing {
+        position: absolute;
+        left: 448px;
+        top: 475px;
+        z-index: 1001;
+        width: 100px;
+      }
+      
+      a.now-playing {
+        opacity: 1;
+        border: 1;
+      }
+      a.now-playing:hover img {
+        transform: scale(1.02) translateX(-0.2vw) perspective(500px) rotate3d(0, -1, 0.01, 6deg);
+      }
+      
+      .now-playing .np-metadata > span {
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: left;
+        width: 500px;
+        font-size: 10px;
+      }
+
+      
+      .now-playing .np-metadata {
+        margin-top: 16px;
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+        transition-delay: 0.5s;
+      }
+      .now-playing.loaded .np-metadata {
+        opacity: 1;
+        position: absolute;
+        left: 55px;
+        top: 2px;
+        height: 50px;
+        width: 500px;
+      }
+      
+      .now-playing img {
+        opacity: 0;
+        transform: scale(0.97) translateX(10px) perspective(500px);
+        border-radius: 2px;
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.2);
+        object-fit: cover;
+        transition: all 1s cubic-bezier(0.13, 0.95, 0, 1), transform 2s cubic-bezier(0.13, 0.95, 0, 1);
+      }
+      
+      .now-playing.loaded img {
+        opacity: 1;
+        transform: perspective(500px) rotate3d(0, -1, 0, 4deg);
+      }
+      
+      .now-playing .np-metadata .np-heading {
+        position: absolute;
+        top: -17px;
+        left: 0px;
+        font-size: 11px;
+        font-weight: 900;
+        opacity: 1;
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        width: 98px;
+      }
+      
+      .now-playing .np-metadata .np-roon {
+        width: 10px;
+        opacity: 0.5;
+      }
+    
+
+
+      @keyframes pulsate {
+        0% { transform: scale(0.2, 0.2) rotate(0deg); opacity: 0.0; }
+        50% { transform: scale(1, 1) rotate(50deg); opacity: 1; }
+        80% { transform: scale(1.8, 1.8) rotate(80deg); opacity: 0.2; }
+        100% { transform: scale(4, 4) rotate(100deg); opacity: 0; }
+      }
