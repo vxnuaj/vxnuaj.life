@@ -59,7 +59,7 @@ function playSound(audioName, volume, duration) {
 }
 
 
-//lastfm+applemusic
+//lastfm+applemusic for index.html
 
 var LFM_API = "https://ws.audioscrobbler.com/2.0/";
 var LFM_KEY = "11d3d143fcf0866bce70d5c1f495bc64"; // Get one at https://secure.last.fm/login?next=/api/account/create
@@ -183,8 +183,7 @@ setInterval(() =>{
 let d = new Date ();
 time.innerHTML = d.toLocaleTimeString ();
 
-//books
+//unsplash @vxnuaj
 
 
-fetch('https://oku.club/api/collections/user/vxnuaj/reading?')
-  .then(res=> console.log(res))
+

@@ -15,7 +15,6 @@ body {
 
 .wrapper {
     position: relative;
-    display: flex;
     flex-direction: column;
 }
 
@@ -806,6 +805,185 @@ a:active { text-decoration: none;
     padding: 280px;
 }
 
+/*/life.html/*/
+
+#favbooks a{
+    position: relative;
+    top: 354px;
+    left: 440px;
+    font-size: 20px;
+    font-weight: 600;
+    text-underline-offset: 3px;
+    animation: fade-down 1s;
+    display: inline-block;
+    text-underline-offset: 3px;
+    animation: fade-down 1s;
+    display: inline-block;
+
+}
+
+
+#favbooks a:hover{
+    text-decoration: underline;
+    text-decoration-color: #FFC482;
+    color: #FFC482;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+#meditationsblck {
+    position: absolute;
+    top: 434px;
+    left: 445px;
+    height: 40px;
+    width: fit-content;
+    border-radius: 10px;
+    animation: fade-down 1s;
+    display: inline-block;
+    transition: all 1s cubic-bezier(0.13, 0.95, 0, 1), transform 2s cubic-bezier(0.13, 0.95, 0, 1);
+
+}
+
+#meditationsblck:hover {
+    transform: scale(1.04);
+}
+
+#meditationsblck img {
+    transition: all 1s cubic-bezier(0.13, 0.95, 0, 1), transform 2s cubic-bezier(0.13, 0.95, 0, 1);
+    cursor: grab;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: perspective(500px) rotate3d(0, 1, 0, 12deg);
+}
+
+#meditationsblck img:hover{
+    transform: perspective(500px) rotate3d(0, 1, .2, 25deg);
+}
+
+#meditations {
+    position: relative;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+    animation: fade-down 1s;
+}
+
+#meditationstxt {
+    position: relative;
+    top: 11px;
+    left: 0px;
+    font-weight: 600;
+    font-size: 14px;
+    animation: fade-down 1s;
+}
+
+#meditationsuthor {
+    position: relative;
+    top: 19px;
+    left: 0px;
+    font-weight: 600;
+    font-size: 14px;
+    font-weight: 450;
+    font-style: italic;
+    animation: fade-down 1s;
+}
+
+#rcntmusic a{
+    position: relative;
+    top: 741px;
+    left: 440px;
+    font-size: 20px;
+    font-weight: 600;
+    text-underline-offset: 3px;
+    animation: fade-down 1s;
+    display: inline-block;
+    
+}
+
+
+#rcntmusic a:hover{
+    text-decoration: underline;
+    text-decoration-color: #FFC482;
+    color: #FFC482;
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+#boneblck {
+    position: absolute;
+    top: 434px;
+    left: 645px;
+    height: 40px;
+    width: fit-content;
+    border-radius: 10px;
+    animation: fade-down 1s;
+    display: inline-block;
+    transition: .2s;
+}
+
+
+#boneblck:hover {
+    transform: scale(1.04);
+}
+
+#boneblck img {
+    transition: all 1s cubic-bezier(0.13, 0.95, 0, 1), transform 2s cubic-bezier(0.13, 0.95, 0, 1);
+    cursor: grab;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: perspective(500px) rotate3d(0, 1, 0, 12deg);
+}
+
+#boneblck img:hover {
+    transform: perspective(500px) rotate3d(0, 1, .2, 25deg);
+}
+
+#bone {
+    position: relative;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+    animation: fade-down 1s;
+}
+
+#bonetxt {
+    position: relative;
+    top: 11px;
+    left: 0px;
+    font-weight: 600;
+    font-size: 14px;
+    animation: fade-down 1s;
+}
+
+#boneauthor {
+    position: relative;
+    top: 19px;
+    left: 0px;
+    font-weight: 600;
+    font-size: 14px;
+    font-weight: 450;
+    font-style: italic;
+    animation: fade-down 1s;
+}
+
+
+#headphones {
+    position: absolute;
+    top: 568px;
+    left: 610px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#headphones:hover{
+    transform: scale(1.05);
+    transition: .3s;
+}
+
 /*/ weather /*/
 
 #weather-results{
@@ -887,8 +1065,6 @@ a:active { text-decoration: none;
 
       }
 
-
-
       
       .nowplaying .np-metadata {
         margin-top: 16px;
@@ -902,7 +1078,7 @@ a:active { text-decoration: none;
         position: absolute;
         line-height: 1.75;
         left: 85px;
-        top: -21px;
+        top: -15px;
         height: 20px;
         width: auto;
       }
@@ -922,7 +1098,7 @@ a:active { text-decoration: none;
       
       .nowplaying.loaded img {
         opacity: 1;
-        transform: perspective(500px) rotate3d(0, -1, 0, 4deg);
+        transform: perspective(500px) rotate3d(0, 1, 0, 4deg);
       }
       
       .nowplaying .np-metadata .np-heading {
@@ -951,3 +1127,310 @@ a:active { text-decoration: none;
         80% { transform: scale(1.8, 1.8) rotate(80deg); opacity: 0.2; }
         100% { transform: scale(4, 4) rotate(100deg); opacity: 0; }
       }
+
+      /*/ life.html tracks /*/
+
+      .now-playing {
+        position: absolute;
+        left: 445px; /* Adjust the positioning as per your requirements */
+        top: 850px; /* Adjust the positioning as per your requirements */
+        z-index: 1001;
+        transition-duration: .25s;
+      }
+
+      .now-playing:hover{
+        transform: scale(1.04);
+      }
+
+      .now-playing a.now-playing {
+        opacity: 1;
+        border: 0;
+      }
+
+      .now-playing a.now-playing:hover img {
+        transform: scale(1.02) translateX(0.2vw) perspective(500px) rotate3d(0, 1, 0.01, 6deg);
+      }
+
+      .now-playing .np-metadata .np-heading {
+        position: absolute;
+        top: -24px;
+        left: 0px;
+        font-size: 14px;
+        font-weight: 900;
+        opacity: 1;
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+        width: auto;
+        font-style: italic;
+      }
+
+      .now-playing .np-metadata > span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+        line-height: 180%;
+        text-align: left;
+      }
+
+      .now-playing .np-metadata {
+        opacity: 1;
+        position: relative;
+        width: 155px;
+        left: 5px;
+      }
+
+      .now-playing.loaded .np-metadata {
+        opacity: 1;
+        position: relative;
+        width: 155px;
+        left: 5px;
+        top: 34px;
+      }
+
+      .now-playing .np-metadata .np-date {
+        font-size: 10px;
+      }
+
+      .now-playing img {
+        opacity: 0;
+        transform: scale(0.97) translateX(-10px) perspective(500px);
+        border-radius: 13px;
+        width: 150px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: all 1s cubic-bezier(0.13, 0.95, 0, 1), transform 2s cubic-bezier(0.13, 0.95, 0, 1);
+      }
+
+      .now-playing.loaded img {
+        opacity: 1;
+        transform: perspective(500px) rotate3d(00, 1, 0, 12deg);
+      }
+
+      .now-playing.loaded img:hover{
+        transform: perspective(500px) rotate3d(0, 1, .2, 25deg);
+        cursor: grab;
+        
+      }
+
+
+      .now-playing .np-metadata .np-roon {
+        width: 10px;
+        opacity: 0.5;
+      }
+      
+      .now-playing .np-metadata .breather {
+        margin-right: 8px;
+        display: inline-block;
+        animation: pulsate 5s linear 0s infinite;
+      }
+      
+      @keyframes pulsate {
+        0% {
+          transform: scale(0.2, 0.2) rotate(0deg);
+          opacity: 0.0;
+        }
+        50% {
+          transform: scale(1, 1) rotate(50deg);
+          opacity: 1;
+        }
+        80% {
+          transform: scale(1.8, 1.8) rotate(80deg);
+          opacity: 0.2;
+        }
+        100% {
+          transform: scale(4, 4) rotate(100deg);
+          opacity: 0;
+        }
+      }
+
+
+      .now-playing.second-track {
+        position: absolute;
+        left: 655px; /* Adjust the positioning as per your requirements */
+        top: 850px; /* Adjust the positioning as per your requirements */
+        z-index: 1001;
+      }
+      
+      .now-playing.second-track a.now-playing {
+        opacity: 1;
+        border: 0;
+      }
+      
+      .now-playing.second-track a.now-playing:hover img {
+        transform: scale(1.02) translateX(0.2vw) perspective(500px) rotate3d(0, 1, 0.01, 6deg);
+      }
+      
+      .now-playing.second-track .np-metadata > span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+        line-height: 180%;
+        text-align: left; /* Adjust the alignment as per your requirements */
+      }
+      
+      .now-playing.second-track .np-metadata {
+        margin-top: 16px;
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+      }
+      
+      .now-playing.second-track.loaded .np-metadata {
+        opacity: 1;
+        position: relative;
+        width: 155px;
+        left: 5px;
+        top: -8px;
+      }
+
+      .now-playing.second-track .np-metadata .np-date {
+        font-size: 10px;
+      }
+      
+      
+      .now-playing.second-track img {
+        opacity: 0;
+        transform: scale(0.97) translateX(-10px) perspective(500px);
+        border-radius: 13px;
+        width: 150px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transition: all 1s cubic-bezier(0.13, 0.95, 0, 1), transform 2s cubic-bezier(0.13, 0.95, 0, 1);
+      }
+      
+      .now-playing.second-track.loaded img {
+        opacity: 1;
+        transform: perspective(500px) rotate3d(0, 1, 0, 12deg);
+      }
+
+      .now-playing.second-track.loaded img:hover{
+        transform: perspective(500px) rotate3d(0, 1, .2, 25deg);
+        cursor: grab;
+        
+      }
+
+      
+      .now-playing.second-track .np-metadata .np-roon {
+        width: 10px;
+        opacity: 0.5;
+      }
+      
+      .now-playing.second-track .np-metadata .breather {
+        margin-right: 8px;
+        display: inline-block;
+        animation: pulsate 5s linear 0s infinite;
+      }
+      
+      @keyframes pulsate {
+        0% {
+          transform: scale(0.2, 0.2) rotate(0deg);
+          opacity: 0.0;
+        }
+        50% {
+          transform: scale(1, 1) rotate(50deg);
+          opacity: 1;
+        }
+        80% {
+          transform: scale(1.8, 1.8) rotate(80deg);
+          opacity: 0.2;
+        }
+        100% {
+          transform: scale(4, 4) rotate(100deg);
+          opacity: 0;
+        }
+      }
+
+      .now-playing.third-track {
+        position: absolute;
+        left: 865px; /* Adjust the positioning as per your requirements */
+        top: 850px; /* Adjust the positioning as per your requirements */
+        z-index: 1001;
+      }
+      
+      .now-playing.third-track a.now-playing {
+        opacity: 1;
+        border: 0;
+      }
+      
+      .now-playing.third-track a.now-playing:hover img {
+        transform: scale(1.02) translateX(0.2vw) perspective(500px) rotate3d(0, 1, 0.01, 6deg);
+      }
+      
+      .now-playing.third-track .np-metadata > span {
+        display: block;
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        font-weight: 500;
+        line-height: 180%;
+        text-align: left; /* Adjust the alignment as per your requirements */
+      }
+      
+      .now-playing.third-track .np-metadata {
+        margin-top: 16px;
+        opacity: 0;
+        transition: opacity 0.4s ease-out;
+      }
+      
+      .now-playing.third-track.loaded .np-metadata {
+        opacity: 1;
+        position: relative;
+        width: 155px;
+        left: 5px;
+        top: -8px;
+      }
+
+      .now-playing.third-track .np-metadata .np-date {
+        font-size: 10px;
+      }
+      
+      
+      .now-playing.third-track img {
+        opacity: 0;
+        transform: scale(0.97) translateX(-10px) perspective(500px);
+        border-radius: 13px;
+        width: 150px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      
+        transition: all 1s cubic-bezier(0.13, 0.95, 0, 1), transform 2s cubic-bezier(0.13, 0.95, 0, 1);
+      }
+      
+      .now-playing.third-track.loaded img {
+        opacity: 1;
+        transform: perspective(500px) rotate3d(0, 1, 0, 12deg);
+      }
+
+      .now-playing.third-track.loaded img:hover {
+        opacity: 1;
+        transform: perspective(500px) rotate3d(0, 1, .2, 25deg);
+      }
+
+      
+      .now-playing.third-track .np-metadata .np-roon {
+        width: 10px;
+        opacity: 0.5;
+      }
+      
+      .now-playing.third-track .np-metadata .breather {
+        margin-right: 8px;
+        display: inline-block;
+        animation: pulsate 5s linear 0s infinite;
+      }
+      
+      @keyframes pulsate {
+        0% {
+          transform: scale(0.2, 0.2) rotate(0deg);
+          opacity: 0.0;
+        }
+        50% {
+          transform: scale(1, 1) rotate(50deg);
+          opacity: 1;
+        }
+        80% {
+          transform: scale(1.8, 1.8) rotate(80deg);
+          opacity: 0.2;
+        }
+        100% {
+          transform: scale(4, 4) rotate(100deg);
+          opacity: 0;
+        }
+      }
+      
