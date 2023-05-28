@@ -1,110 +1,65 @@
 const toggle = document.getElementById('toggleDark');
 const body = document.querySelector('body');
-const waitxt = document.querySelector('#waitxt')
-const interesttxt = document.querySelector('#interesttxt');
-const buildingTxt = document.getElementById("buildingtxt");
-
-const sicon = document.getElementById("sicon");
-
+const darkCursor ='url(images/cursors/dcursorlightning.svg), auto';
 
 toggle.addEventListener('click', function() {
-    this.classList.toggle('bi-sun');
-    if (this.classList.toggle('bi-moon')) {
-      body.style.background = 'black';
-      body.style.color = 'white';
-      body.style.transition = '.25s';
-
-      function playSound(audioName) {
-        let audio = new Audio (audioName);
-        audio.loop=false;
-        audio.play ();
-        audio.volume = .5;
-        audio.duration = .07;
-    }
-    playSound("switch-20.wav")
-
-    
+  this.classList.toggle('bi-sun');
+  this.classList.toggle('bi-moon');
   
-      document.querySelectorAll('.socialicons svg').forEach(function(icon) {
-        icon.style.fill = 'white';
-        icon.style.transition = '.25s';
-      });
-      document.querySelectorAll('.socialicons2 svg').forEach(function(icon) {
-        icon.style.fill = 'white';
-        icon.style.transition = '.25s';
-      });
-      
-
-      omdp.style.color='#9CA3AF'
-      synthexiacrd.style.color ='white'
-      synthexiacrd.style.background='black'
-      ahcrd.style.color = 'white'
-      ahcrd.style.background = 'black'
-      dpcrd.style.color = 'white'
-      dpcrd.style.background = 'black'
-      ppcrd.style.color = 'white'
-      ppcrd.style.background = 'black'
-      pwcrd.style.color = 'white'
-      pwcrd.style.background = 'black'
-      
-    } 
-    else {
-      body.style.background = 'white';
-      body.style.color = 'black';
-      body.style.transition = '.25s';
-    
-      function playSound(audioName) {
-        let audio = new Audio (audioName);
-        audio.loop=false;
-        audio.play ();
-        audio.volume = .5;
-        audio.duration = .05;
-    }
-    playSound("switch-20.wav")
-    
-    document.querySelectorAll('.socialicons svg').forEach(function(icon) {
-      icon.style.fill = 'black';
-      icon.style.transition = '.25s';
-    });
-    
-    document.querySelectorAll('.socialicons2 svg').forEach(function(icon) {
-      icon.style.fill = 'black';
-      icon.style.transition = '.25s';
-    });
-
-      omdp.style.color='black'
-      synthexiacrd.style.color ='black'
-      synthexiacrd.style.background='white'
-      ahcrd.style.color = 'black'
-      ahcrd.style.background = 'white'
-      dpcrd.style.color = 'black'
-      dpcrd.style.background = 'white'
-      ppcrd.style.color = 'black'
-      ppcrd.style.background = 'white'
-      pwcrd.style.color = 'black'
-      pwcrd.style.background = 'white'
-      
-    }
+  const isDarkMode = this.classList.contains('bi-moon');
   
+  body.style.background = isDarkMode ? '#161616' : 'white';
+  body.style.color = isDarkMode ? 'white' : 'black';
+  body.style.transition = '.2s';
+  
+
+  
+  const audioName = "switch-20.wav";
+  const audioVolume = 0.5;
+  const audioDuration = isDarkMode ? 0.07 : 0.05;
+  playSound(audioName, audioVolume, audioDuration);
+  
+  const themeColor = isDarkMode ? '#242323' : '#F5F5F5';
+  const borderColor = isDarkMode ? '#434347' : '#D9D9E3';
+  
+  document.querySelector('.bi-moon-fill').style.background = themeColor;
+  document.querySelector('.bi-moon-fill').style.borderColor = borderColor;
+  document.querySelector('.sidebar').style.background = themeColor;
+  document.querySelector('.sidebar').style.borderColor = borderColor;
+  document.querySelector('#omdp').style.color = isDarkMode ? "#a5b0c4" : "black";
+  document.querySelector('#omdp2').style.color = isDarkMode ? "#a5b0c4" : "black";
+  document.querySelector('.dpcrd').style.background = themeColor;
+  document.querySelector('.dpcrd').style.borderColor = borderColor;
+  document.querySelector('#ppcrd').style.background = themeColor;
+  document.querySelector('#ppcrd').style.borderColor = borderColor;
+  document.querySelector('#pwcrd').style.background = themeColor;
+  document.querySelector('#pwcrd').style.borderColor = borderColor;
+  document.querySelector('#synthexiacrd').style.background = themeColor;
+  document.querySelector('#synthexiacrd').style.borderColor = borderColor;
+  document.querySelector('#ahcrd').style.background = themeColor;
+  document.querySelector('#ahcrd').style.borderColor = borderColor;
+  
+  const socialIcons = document.querySelectorAll('.socialicons svg');
+  socialIcons.forEach(function(icon) {
+    icon.style.fill = isDarkMode ? 'white' : 'black';
+    icon.style.transition = '.25s';
   });
 
-  waitxt.addEventListener('animationend', function() {
-    interesttxt.style.animation = 'typing 3.5s steps(55), cursor .4s step-end infinite alternate';
-    interesttxt.style.color = 'inherit';
-  });
+  const nowPlaying = document.querySelector('.nowplaying');
+  nowPlaying.style.borderColor = isDarkMode ? '#46484d' : '#D9D9E3';
 
-interesttxt.addEventListener('animationend', function() {
-    lifetxt.style.animation = 'typing 2.5s steps(42), cursor .4s step-end infinite alternate';
-    lifetxt.style.color = 'inherit';
-  });
+});
 
-lifetxt.addEventListener('animationend', function() {
-    runtxt.style.animation = 'typing 1.5s steps(16), cursor .4s step-end infinite alternate';
-    runtxt.style.color = 'inherit';
-  });
+function playSound(audioName, volume, duration) {
+  const audio = new Audio(audioName);
+  audio.loop = false;
+  audio.play();
+  audio.volume = volume;
+  audio.duration = duration;
+}
 
 
-/* lastfm js /*/
+//lastfm+applemusic
 
 var LFM_API = "https://ws.audioscrobbler.com/2.0/";
 var LFM_KEY = "11d3d143fcf0866bce70d5c1f495bc64"; // Get one at https://secure.last.fm/login?next=/api/account/create
@@ -151,7 +106,7 @@ function renderNowPlaying(track) {
     nowPlayingNode.remove();
   }
   nowPlayingNode = document.createElement("a");
-  nowPlayingNode.setAttribute("class", "now-playing");
+  nowPlayingNode.setAttribute("class", "nowplaying");
 
   var imageurl = track.image.slice(-1)[0]["#text"];
   var nowPlayingImage = document.createElement("img");
@@ -166,7 +121,7 @@ function renderNowPlaying(track) {
   metadata.setAttribute("class", "np-metadata");
   metadata.innerHTML =
     "<span class=\"np-heading\">" + (currently ? "Now Playing" : "Last Played ") + "</span>" +
-    "<span class=\"np-title\"><strong>"+track.name+"</strong></span>" + "<span> •</span>" +
+    "<span class=\"np-title\">"+track.name+"</span>" + "<span> •</span>" +
     "<span class=\"np-artist\"><i> "+track.artist["#text"]+"</i></span>"
 
   nowPlayingNode.appendChild(metadata);
@@ -176,7 +131,60 @@ function renderNowPlaying(track) {
   document.body.appendChild(nowPlayingNode);
 
   setTimeout(function() {
-    nowPlayingNode.setAttribute("class", "now-playing loaded");
+    nowPlayingNode.setAttribute("class", "nowplaying loaded");
   }, 100);
 }
+
+//openweathermap
+function renderWeather(weather){
+  console.log(weather);
+  var resultsContainer = document.querySelector("#weather-results");
   
+  
+  //p for temp
+  var temp = document.createElement("span");
+temp.setAttribute("id", "temperatureElement");
+temp.classList.add("weather-temp");
+temp.innerHTML = "feelin' like <span class='weather-temp-bold'>" + weather.main.temp + " F</span>";
+resultsContainer.append(temp);
+
+  //p for weather description
+  var weatherDetails = weather.weather[0];
+if (weatherDetails && weatherDetails.description) {
+  var description = document.createElement("span");
+  description.textContent = " " + " (" + weatherDetails.description + ")";
+  description.setAttribute("id", "weatherdes");
+  description.classList.add("weather-description");
+  resultsContainer.append(description);
+}
+//p for city
+  var city = document.createElement("span");
+  city.textContent = " • "+ "in " + weather.name;
+  city.setAttribute("id","city");
+  resultsContainer.append(city);}
+
+//weather for city
+function fetchWeather(query) {
+  var url = "https://api.openweathermap.org/data/2.5/weather?q="+ query +"&units=imperial&appid=f3fd3a62e78fb61ef61ed70911b46053";
+
+  fetch(url)
+   .then((response) => response.json())
+   .then((data) => renderWeather(data));
+}
+
+fetchWeather ("Gaithersburg");
+
+let time = document.getElementById("clcktime")
+
+setInterval(() =>{
+  let d = new Date ();
+  time.innerHTML = d.toLocaleTimeString ();
+},1000)
+let d = new Date ();
+time.innerHTML = d.toLocaleTimeString ();
+
+//books
+
+
+fetch('https://oku.club/api/collections/user/vxnuaj/reading?')
+  .then(res=> console.log(res))

@@ -1,37 +1,251 @@
 
-body {
-    background-color: #ffffff;
+html {
+    cursor: url(images/cursors/cursorlightning.svg), auto;
+}
 
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+body {
+    background-color: inherit;
+    font-family: Inter;
     width: fit-content;
     overflow: scroll;
 }
 
 
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar{
+    position: fixed;
+    width: 256px;
+    height: 100%;
+    border: solid rgba(211, 211, 222, 0.808);
+    border-width: 0px 1.5px 0px 0px;
+    top: -1px;
+    left: 0px;
+    background: #f5f5f5;
+    z-index: 10;
+
+}
+
+.melol{
+    position: absolute;
+    clip-path: circle();
+    width: 60px;
+    top: 40px;
+    left: 30px;
+    object-fit: cover;
+    height: auto;
+    transition: .25s;
+}
+
+.melol:hover {
+    transform: scale(1.15);
+}
+
+.melol2 {
+    position: absolute;
+    clip-path: circle();
+    width: 100px;
+    top: 144px;
+    left: 440px;
+    object-fit: cover;
+    height: auto;
+    animation: fade-down .9s;
+    transition: .25s;
+}
+
+.melol2:hover {
+    transform: scale(1.15);
+}
+
+.jv{
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    left: 120px;
+    top: 45px;
+}
+
+.pstatus {
+    position: relative;
+    left: 120px;
+    top: 37px;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.mainul{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: auto;
+    padding: 0px;
+    left: 75px;
+    top: 190px;
+    font-size: 15px;
+}
+.mainul li{
+    position: relative;
+    top: 6px;
+}
+
+.mainul li a {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.maintxt {
+    position: relative;
+    left: -31px;
+    font-weight: 600;
+    font-size: 11px;
+}
+
+.sidebar ul li {
+    text-align: left;
+    line-height: 2.5;
+    font-weight: 500;
+    width: fit-content;
+    
+}
+
+.iprofile {
+    position: relative;
+    left: -80px;
+    top: 3.5px;
+    width: 20px;
+    padding: 0px;
+}
+
+.itools {
+    position: relative;
+    left: -92px;
+    top: 3px;
+    width: 20px;
+}
+
+.ifire {
+    position: relative;
+    left: -118px;
+    top: 2.5px;
+    width: 40px;
+}
+.ithought{
+    position: relative;
+    left: -109px;
+    top: 3px;
+    height: 16px;
+    width: 16px;
+}
+
+.istar{
+    position: relative;
+    left: -86px;
+    top: 8px;
+    height: 23px;
+    width: 23px;
+    transform: scaleX(-1);
+    rotate: -45deg;
+}
+.socialtxt{
+    color: inherit;
+    position: relative;
+    top: 0px;
+    left: -30px;
+    font-size: 11px;
+    font-weight:600;
+}
+
+.socialul{
+    color: inherit;
+    fill: inherit;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    width: auto;
+    padding: 0px;
+    left: 75px;
+    top: 420px;
+    font-size: 15px;
+}
+
+.socialul li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 2.5;
+    height: auto;
+    top: 6px;
+}
+
+.iig{
+    position: relative;
+    height: 14px;
+    width: 14px;
+    left: -95px;
+    top: 2px;
+}
+
+.itwitter{
+    position: relative;
+    height: 15px;
+    width: 15px;
+    left: -70px;
+    top: 1.9px;
+}
+
+.igit{
+    position: relative;
+    height: 14px;
+    width: 14px;
+    left: -68.8px;
+    top: 2.75px;
+}
+
+.icv {
+    position: relative;
+    height: 21px;
+    width: 21px;
+    left: -77.8px;
+    top: 5.4px;
+}
+
 #toggleDark{
     font-size: 25px;
     cursor: pointer;
-    position: absolute;
-    top: 0px;
-    left: 690px;
+    position: fixed;
+    top: 160px;
+    left: 1150px;
     transition: .1s;
+    animation: fade-down 1s;
+    align-items: center;
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 10px;
+    width: 60px;
+    height: 42px;
+    border: 2px solid #D9D9E3;
+}
+
+.bi-moon-fill {
+    background-color: #F5F5F5;
 }
 
 #toggleDark:hover {
     transform: scale(1.10);
 }
 
-#navbar {
-    width: 500px;
-    display: inline;
-    position: fixed;
-    left: 405px;
-    top: 90px;
-    font-weight: 400;
-    color: inherit;
-    animation: fade-down .5s;
-
-}
 
 .projhov {
     text-align: center;
@@ -99,69 +313,85 @@ li {
     transition: .1s;
     left: 0px;
     text-align: center;
+    width: fit-content;
+    white-space: wrap;
 }
 
 li:hover {
     transform: scale(1.10);
+    text-decoration: underline;
+    text-decoration-color: #FFC482;
+    color: #FFC482;
+    text-underline-offset: 3.2px;
     cursor:pointer;
-    
 }
 
 ul{
     text-decoration: none;
 }
 #vxnuajtxt {
-font-size: 45px;
+font-size: 53px;
 position: absolute;
-left: 445px;
-top: 143px;
-animation: fade-down .5s;
+left: 570px;
+top: 120px;
+animation: fade-down 1s;
+}
+
+.jv2 {
+    position: absolute;
+    left: 575px;
+    top: 209px;
+    font-style: italic;
+    font-size: 18px;
+    animation: fade-down .9s;
 }
 
 #buildingtxt{
-    font-size: 40px;
-position: absolute;
-left: 450px;
-top: 150px;
-overflow: show;
+    font-size: 53px;
+    position: absolute;
+    left: 438px;
+    top: 120px;
+    animation: fade-down 1s;
 }
 
 #omdp{
     font-size: 16px;
-    position: absolute;
-    width: 294px;
-    font-weight: 400;
-    top: 50px;
+    position: relative;
+    width: auto;
+    font-weight: 430;
+    top: 0px;
+    transition: .1s;
+}
+
+#omdp2{
+    font-size: 16px;
+    position: relative;
+    width: auto;
+    font-weight: 430;
+    top: 0px;
     transition: .1s;
 }
 
 #archivetxt{
-    font-size: 40px;
+    font-size: 53px;
 position: absolute;
-left: 450px;
-top: 144px;
+left: 438px;
+top: 600px;
 overflow: show;
-animation: fade-down .5s;
+animation: fade-down 1s;
 }
 
-#archivep{
-    font-size: 16px;
-    position: absolute;
-    width: 294px;
-    font-weight: 400;
-    top: 50px;
-}
 
 #synthexiacrd {
     position: absolute;
     left: 0px;
-    top: 105px;
+    top: 150px;
     width: 560px;
     height: 80px;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
-    background-color: inherit;
-    border: 1px solid #1E2938;
+    background-color: #f5f5f5;
+    border: 2px solid #D9D9E3;
     z-index:5;
     transition: .1s;
 }
@@ -207,13 +437,13 @@ animation: fade-down .5s;
 #ahcrd{
     position: absolute;
     left: 0px;
-    top: 200px;
+    top: 250px;
     width: 560px;
     height: 80px;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow:hidden;
-    background-color: inherit;
-    border: 1px solid #1E2938;
+    background-color: #f5f5f5;
+    border: 2px solid #D9D9E3;
     z-index:5;
     transition: .1s; 
 }
@@ -252,17 +482,21 @@ animation: fade-down .5s;
     border-radius: 15px;
 }
 
+.btspace {
+    padding: 166px;
+}
+
 
 #ppcrd{
     position: absolute;
     left: 0px;
-    top: 200px;
+    top: 250px;
     width: 560px;
     height: 80px;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
-    background-color: inherit;
-    border: 1px solid #1E2938;
+    background-color: #f5f5f5;
+    border: 2px solid #D9D9E3;
     z-index:5;
     transition: .1s; 
 }
@@ -296,21 +530,25 @@ animation: fade-down .5s;
     left: 7px;
 }
 
-#dpcrd{
+.dpcrd{
     position: absolute;
     left: 0px;
-    top: 105px;
+    top: 150px;
     width: 560px;
     height: 80px;
-    border-radius: 20px;
+    border-radius: 10px;
+    border: 2px solid #D9D9E3;
     overflow: hidden;
-    background-color: inherit;
-    border: 1px solid #1E2938;
     z-index:5;
     transition: .1s;
+    background-color: #f5f5f5;
 }
 
-#dpcrd:hover {
+.bi-moon .dpcrd {
+    border-color: #FF0000; /* Border color in dark mode */
+  }
+
+.dpcrd:hover {
     transform: scale(1.04);
 }
 
@@ -344,13 +582,13 @@ animation: fade-down .5s;
 #pwcrd{
     position: absolute;
     left: 0px;
-    top: 295px;
+    top: 350px;
     width: 560px;
     height: 80px;
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
-    background-color: inherit;
-    border: 1px solid #1E2938;
+    background-color: #f5f5f5;
+    border: 2px solid#D9D9E3;
     z-index:5;
     transition: .1s;
 }
@@ -386,162 +624,19 @@ animation: fade-down .5s;
     left: 7px;
 }
 
-#side {
-    position: fixed;
-    top: 90px;
-    width: 255px;
-    height: 600px;
-    left: 100px;
-    border-radius: 40px;
-    border-width: 2.5px;
-    overflow: hidden;
-    transition: .1s;
-    z-index: 1;
-    overflow: show;
-    border: 1.75px solid #1e293898;
-
-}
-
-#sideimg {
-    height: 100%;
-
-}
-
-#sideimgsh{
-    position: fixed;
-    top: 120px;
-    width: 255px;
-    height: 600px;
-    left: 80px;
-    border-radius: 40px;
-    overflow: hidden;
-    transition: .2s;
-    filter: blur(10px);
-    opacity: 70%;
-    background: transparent;
-    backdrop-filter: blur(0px);
-}
-
-#sideimg2{
-    position: absolute;
-    height: 600px;
-    left: -1px;
-    top: -3px;
-    filter: brightness(200%);
-    border: 1.75px solid #1e293898;
-    width: 255px;
-    border-radius: 40px;
-    object-fit: cover;
-}
 
 
-#sideimgsh2{
-    position: fixed;
-    top: 110px;
-    width: 260px;
-    height: 590px;
-    left: 90px;
-    border-radius: 40px;
-    overflow: hidden;
-    transition: .2s;
-    filter: brightness(110%)blur(5px);
-    background: transparent;
-    backdrop-filter: blur(5px);
-
-}
-
-#sideimg3{
-    position: absolute;
-    height: 600px;
-    left: -1px;
-    top: -3px;
-    border: 1.75px solid #1e293898;
-    width: 255px;
-    border-radius: 40px;
-    object-fit: cover;
-
-}
-
-#sideimg4 {
-    position: absolute;
-    height: 600px;
-    left: -1px;
-    top: -3px;
-    border: 1.75px solid #1e293898;
-    width: 255px;
-    border-radius: 40px;
-    object-fit: cover;
-
-}
-
-
-
-#side:hover {
-    transform: scale(1.02);
-}
-
-
-
-#waitxt {
+#metxt {
     position: relative;
-    left: 440px;
-    top: 240px;
-    font-size: 18px;
-    width: 420px;
+    left: 445px;
+    top: 280px;
+    font-size: 19px;
+    width: auto;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid rgba(0, 0, 0, 0);
-    animation:
-        typing 2s steps(34),
-        cursor .4s step-end infinite alternate;
-}
-
-#interesttxt {
-    position: relative;
-    left: 440px;
-    top: 255px;
-    font-size: 18px;
-    width: 500px;
-    white-space: nowrap;
-    color: transparent;
-    overflow: hidden;
-    border-right: 3px solid rgba(0, 0, 0, 0);
-}
-
-#lifetxt {
-    position: relative;
-    left: 440px;
-    top: 270px;
-    font-size: 18px;
-    width: 370px;
-    border-right: 3px solid rgba(0,0,0,0);
-    overflow: hidden;
-    color: transparent;
-    white-space: nowrap;
-
-}
-#runtxt {
-    position: relative;
-    left: 440px;
-    top: 285px;
-    font-size: 18px;
-    width: 125px;
-    white-space: nowrap;
-    color: transparent;
-    overflow: hidden;
-    border-right: 3px solid rgba(0,0,0,0);
-}
-
-/*/animation for typing/*/
-   
-@keyframes typing {
-    from { width: 0px }
-}
-
-/*/blinking cursor/*/
-
-@keyframes cursor {
-    to {border-color: transparent;}
+    animation: fade-down 1s;
+    line-height: 1.75;
 }
 
 
@@ -551,52 +646,10 @@ font-weight: 600;
 position: relative;
 }
 
-.socialicons {
-    position: relative;
-    top: 350px;
-    left: 450px;
-    animation: fade-down .5s;
-}
 
-.socialicons2{
-    fill: inherit;
-   z-index: 2;
-   animation: fade-down .5s;
-   position: absolute;
-   width: 180px;
-   left: 24px;
-}
 
-.sicon{
-    position: fixed;
-    top: 660px;
-    left: 460px;
-    border: 1px solid #1E2938;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 4px;
-    border-radius: 20px;
-    width: 220px;
-    height: 27px;
-    background-color:inherit;
-    z-index: 5;
-    backdrop-filter: blur(1.5px);
-    overflow: show;
-    animation: fade-down .5s;
-}
 
-.bi-bi-house-fill {
-    position: relative;
-    top: 0px;
-    left: -9px;
-    height: 20px;
-    width: 25px;
-}
 
-.bi-bi-linkedin{
- position: relative;
- left: -4px
-}
 
 .vl{
     border-left: 1.5px solid #1E2938;
@@ -608,21 +661,28 @@ position: relative;
 
 
 #statuscon {
-    position: absolute;
-    left: 445px;
-    top: 420px;
+    position: relative;
+    left: 444px;
+    top: 300px;
     color: inherit;
     border-radius: 10px;
-    width: 400px;
-    height: 50px;
-    animation: fade-down .2s;
+    width: auto;
+    height: auto;
+    animation: fade-down 1s;
+
 }
 
 #statuscon p{
     position: relative;
     left: 0px;
-    font-size: 13px;
-    top: -6px;
+    font-size: 18px;
+    top: px;
+    font-weight: 500;
+}
+
+.bi-bi-chat-fill {
+    position: relative;
+    left: 2px;
 }
 
 #msgme{
@@ -633,40 +693,15 @@ position: relative;
 }
 
 #msgme:hover {
-    color: #9CA3AF;
+    color: #FFC482;
     transition: .25s;
-    text-decoration: underline solid #9CA3AF ;
+    text-decoration: underline solid #FFC482 ;
 }
 
 
 
-#wifiicon{
-    position: absolute;
-    top: 6.5px;
-    left: 5px;
-    animation: fade-down .2s;
-}
 
 
-#bottomlinks{
-    position: fixed;
-    left: 445px;
-    top: 550px;
-    font-style: oblique 10deg;
-}
-#bottomlinks a{
-    padding-right: 20px;
-    text-decoration: underline solid transparent;
-    text-underline-offset: 2px;
-    animation: fade-down .2s;
-
-}
-
-#bottomlinks a:hover{
-    color: #9CA3AF;
-    text-decoration: underline solid #9CA3AF;
-    transition: .3s;
-}
 
 a:link { text-decoration: none; 
 color: inherit;}
@@ -685,88 +720,225 @@ a:active { text-decoration: none;
 
     @keyframes fade-down { 0%{
         opacity: 0;
-        transform: translateY(-2.5px) scale(.9);
+        transform: translateX(50px) scale(.9);
     }
     
     100%{
         opacity: 1;
-        transform: translateY(0px) scale(1);
+        transform: translateX(0px) scale(1);
     }
     }
+
+/*/ about me /*/
+
+#headtxt {
+    font-size: 53px;
+    position: absolute;
+    left: 438px;
+    top: 120px;
+    animation: fade-down 1s;
+}
+
+#aboutp {
+    position: absolute;
+    left: 440px;
+    top: 250px;
+    line-height: 28px;
+    width: 630px;
+    font-style: italic;
+    font-size: 18px;
+    animation: fade-down .9s;
+}
+
+#connecttxt{
+    position: relative;
+    left: 435px;
+    top: 850px;
+    font-size: 20px;
+    width: auto;
+    font-weight: 550;
+    animation: fade-down .9s; 
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+
+#conmelinks{
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    list-style-type: none;
+    width: 290px;
+    left: 430px;
+    top: 853px;
+    font-weight: 450;
+    animation: fade-down .9s; 
+    line-height: 1.2;
+    border: 1.5px solid #d9d9e37a;
+    background-color: #aaaab115;
+    border-radius: 18px;
+    text-align: left;
+    transition: transform .1s;
+}
+
+#conmelinks:hover{
+    transform: scale(1.04);
+
+    
+}
+
+
+#conmelinks li a{
+    position: relative;
+    display: block;
+    margin: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    text-align: left;
+    left: -20px;
+    transition: 0s;
+}
+
+.btspace2{
+    position: absolute;
+    top: 550px;
+    left: -400px;
+    padding: 280px;
+}
+
+/*/ weather /*/
+
+#weather-results{
+    position: relative;
+    left: 445px;
+    top: 297px;
+    font-size: 18px;
+    width: auto;
+    height: 18px;
+    font-weight: 500;
+    animation: fade-down 1s;
+}
+
+.weather-temp-bold {
+    font-weight: 750;
+  }
+
+.weather-description{
+    font-weight: 500;
+    font-size: 11px;
+}
+
+#city {
+    font-weight: 750;
+}
+
+#weather-results span{
+    color: inherit;
+}
+
+.thermometer {
+    position: absolute;
+    left: 373px;
+    top: 4.5px;
+}
+
+
+
+
+
 
 /* music from lastfm+apple music /*/
 
-    .now-playing {
+    .nowplaying {
         position: absolute;
-        left: 448px;
-        top: 475px;
-        z-index: 1001;
-        width: 100px;
+        left: 440px;
+        top: 570px;
+        width: 560px;
+        padding-left:10px ;
+        margin: 0px;
+        border-radius: 7px;
+        transition-duration: .25s;
+        animation: fade-down 1s;
+        
       }
       
-      a.now-playing {
+      .nowplaying:hover{
+        transform: scale(1.04);
+      }
+
+      a.nowplaying {
         opacity: 1;
         border: 1;
       }
-      a.now-playing:hover img {
+      a.nowplaying:hover img {
         transform: scale(1.02) translateX(-0.2vw) perspective(500px) rotate3d(0, -1, 0.01, 6deg);
       }
       
-      .now-playing .np-metadata > span {
+      .nowplaying .np-metadata > span {
         font-size: 14px;
         letter-spacing: -0.01em;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.5;
         text-align: left;
-        width: 500px;
-        font-size: 10px;
+        width: auto;
+        position: relative;
+        top: 0px;
+        left: 0px;
+
       }
 
+
+
       
-      .now-playing .np-metadata {
+      .nowplaying .np-metadata {
         margin-top: 16px;
         opacity: 0;
         transition: opacity 0.4s ease-out;
         transition-delay: 0.5s;
+        
       }
-      .now-playing.loaded .np-metadata {
+      .nowplaying.loaded .np-metadata {
         opacity: 1;
         position: absolute;
-        left: 55px;
-        top: 2px;
-        height: 50px;
-        width: 500px;
+        line-height: 1.75;
+        left: 85px;
+        top: -21px;
+        height: 20px;
+        width: auto;
       }
       
-      .now-playing img {
+      .nowplaying img {
         opacity: 0;
         transform: scale(0.97) translateX(10px) perspective(500px);
-        border-radius: 2px;
-        width: 40px;
-        height: 40px;
+        border-radius: 5px;
+        width: auto;
+        height: 60px;
         box-shadow: 0 0 25px rgba(0,0,0,0.2);
         object-fit: cover;
         transition: all 1s cubic-bezier(0.13, 0.95, 0, 1), transform 2s cubic-bezier(0.13, 0.95, 0, 1);
+        position: absolute;
+        top: -31px;
       }
       
-      .now-playing.loaded img {
+      .nowplaying.loaded img {
         opacity: 1;
         transform: perspective(500px) rotate3d(0, -1, 0, 4deg);
       }
       
-      .now-playing .np-metadata .np-heading {
+      .nowplaying .np-metadata .np-heading {
         position: absolute;
-        top: -17px;
+        top: -20px;
         left: 0px;
-        font-size: 11px;
+        font-size: 14px;
         font-weight: 900;
         opacity: 1;
         text-transform: uppercase;
         letter-spacing: 0.11em;
-        width: 98px;
+        width: auto;
+        font-style: italic;
       }
       
-      .now-playing .np-metadata .np-roon {
+      .nowplaying .np-metadata .np-roon {
         width: 10px;
         opacity: 0.5;
       }
