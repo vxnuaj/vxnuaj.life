@@ -2,45 +2,7 @@ const toggle = document.getElementById('toggleDark');
 const body = document.querySelector('body');
 const darkCursor ='url(images/cursors/dcursorlightning.svg), auto';
 
-//unsplash @vxnuaj
 
-document.addEventListener('DOMContentLoaded', function() {
-  var accessKey = 'qRxI3zj6xJzWSMrZuKy1gP6LyFpxOrcdy5e53wfFNBs';
-  var username = 'vxnuaj';
-  var imageLimit = 6; // Set the image limit to 6
-
-  // Fetch image data from your personal Unsplash gallery
-  fetch('https://api.unsplash.com/users/' + username + '/photos?client_id=' + accessKey)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(data) {
-      console.log(data); // Log the JSON data in the console
-
-      // Display the images in the HTML
-      var imageContainer = document.querySelector('.image-container');
-      for (var i = 0; i < imageLimit && i < data.length; i++) { // Modify the for loop condition
-        var img = document.createElement('img');
-        img.src = data[i].urls.regular;
-        img.width = 400;
-        img.className = 'sample_img';
-        img.setAttribute('data-unsplash-url', data[i].links.html); // Set data attribute with Unsplash URL
-        imageContainer.appendChild(img);
-      }
-      
-      // Add click event listener to each image
-      var images = document.querySelectorAll('.sample_img');
-      images.forEach(function(image) {
-        image.addEventListener('click', function() {
-          var unsplashUrl = this.getAttribute('data-unsplash-url');
-          window.open(unsplashUrl, '_blank'); // Open Unsplash URL in a new tab
-        });
-      });
-    })
-    .catch(function(error) {
-      console.log('Error:', error);
-    });
-});
 
 
 //darkmode
@@ -109,6 +71,121 @@ function playSound(audioName, volume, duration) {
   audio.volume = volume;
   audio.duration = duration;
 }
+
+
+
+//blog
+
+function displayBlogLinks() {
+  const blogList = document.getElementById('blog-list');
+
+  // Fetch the blog data from the JSON file
+  fetch('blogData.json')
+    .then(response => response.json())
+    .then(blogData => {
+      blogData.forEach(blog => {
+        const listItem = document.createElement('div');
+
+        const link = document.createElement('a');
+        link.href = `blog.html?id=${blog.id}`;
+        link.className = 'blog-link';
+        link.textContent = blog.title;
+
+        const description = document.createElement('p');
+        description.className = 'blog-description';
+        description.textContent = blog.description;
+
+        listItem.appendChild(link);
+        listItem.appendChild(description);
+        blogList.appendChild(listItem);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching blog data:', error);
+    });
+}
+
+// Display blog links when the page loads
+window.addEventListener('DOMContentLoaded', displayBlogLinks);
+function displayBlogPost() {
+  const blogContainer = document.getElementById('blog-container');
+  const titleElement = document.getElementById('blog-title');
+  const dateElement = document.getElementById('blog-date'); // Get the element for the date
+  const contentElement = document.getElementById('blog-content');
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const blogId = parseInt(urlParams.get('id'));
+
+  fetch('blogData.json')
+    .then(response => response.json())
+    .then(blogData => {
+      const blogPost = blogData.find(blog => blog.id === blogId);
+
+      if (blogPost) {
+        titleElement.textContent = blogPost.title;
+        dateElement.textContent = formatDate(blogPost.date); // Display the formatted date
+        contentElement.innerHTML = blogPost.content;
+
+        blogContainer.style.display = 'block';
+      } else {
+        blogContainer.style.display = 'none';
+      }
+    })
+    .catch(error => {
+      console.error('Error fetching blog data:', error);
+      blogContainer.style.display = 'none';
+    });
+}
+
+function formatDate(dateString) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  const date = new Date(dateString);
+  return date.toLocaleDateString(undefined, options);
+}
+
+window.addEventListener('DOMContentLoaded', displayBlogPost);
+
+
+
+//unsplash @vxnuaj
+
+document.addEventListener('DOMContentLoaded', function() {
+  var accessKey = 'qRxI3zj6xJzWSMrZuKy1gP6LyFpxOrcdy5e53wfFNBs';
+  var username = 'vxnuaj';
+  var imageLimit = 6; // Set the image limit to 6
+
+  // Fetch image data from your personal Unsplash gallery
+  fetch('https://api.unsplash.com/users/' + username + '/photos?client_id=' + accessKey)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      console.log(data); // Log the JSON data in the console
+
+      // Display the images in the HTML
+      var imageContainer = document.querySelector('.image-container');
+      for (var i = 0; i < imageLimit && i < data.length; i++) { // Modify the for loop condition
+        var img = document.createElement('img');
+        img.src = data[i].urls.regular;
+        img.width = 400;
+        img.className = 'sample_img';
+        img.setAttribute('data-unsplash-url', data[i].links.html); // Set data attribute with Unsplash URL
+        imageContainer.appendChild(img);
+      }
+      
+      // Add click event listener to each image
+      var images = document.querySelectorAll('.sample_img');
+      images.forEach(function(image) {
+        image.addEventListener('click', function() {
+          var unsplashUrl = this.getAttribute('data-unsplash-url');
+          window.open(unsplashUrl, '_blank'); // Open Unsplash URL in a new tab
+        });
+      });
+    })
+    .catch(function(error) {
+      console.log('Error:', error);
+    });
+});
 
 
 //lastfm+applemusic for index.html
