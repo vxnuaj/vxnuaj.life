@@ -2,6 +2,47 @@ const toggle = document.getElementById('toggleDark');
 const body = document.querySelector('body');
 const darkCursor ='url(images/cursors/dcursorlightning.svg), auto';
 
+//unsplash @vxnuaj
+
+document.addEventListener('DOMContentLoaded', function() {
+  var accessKey = 'qRxI3zj6xJzWSMrZuKy1gP6LyFpxOrcdy5e53wfFNBs';
+  var username = 'vxnuaj';
+
+  // Fetch image data from your personal Unsplash gallery
+  fetch('https://api.unsplash.com/users/' + username + '/photos?client_id=' + accessKey)
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      console.log(data); // Log the JSON data in the console
+
+      // Display the images in the HTML
+      var imageContainer = document.querySelector('.image-container');
+      for (var i = 0; i < data.length; i++) {
+        var img = document.createElement('img');
+        img.src = data[i].urls.regular;
+        img.width = 400;
+        img.className = 'sample_img';
+        img.setAttribute('data-unsplash-url', data[i].links.html); // Set data attribute with Unsplash URL
+        imageContainer.appendChild(img);
+      }
+      
+      // Add click event listener to each image
+      var images = document.querySelectorAll('.sample_img');
+      images.forEach(function(image) {
+        image.addEventListener('click', function() {
+          var unsplashUrl = this.getAttribute('data-unsplash-url');
+          window.open(unsplashUrl, '_blank'); // Open Unsplash URL in a new tab
+        });
+      });
+    })
+    .catch(function(error) {
+      console.log('Error:', error);
+    });
+});
+
+//darkmode
+
 toggle.addEventListener('click', function() {
   this.classList.toggle('bi-sun');
   this.classList.toggle('bi-moon');
@@ -182,8 +223,4 @@ setInterval(() =>{
 },1000)
 let d = new Date ();
 time.innerHTML = d.toLocaleTimeString ();
-
-//unsplash @vxnuaj
-
-
 

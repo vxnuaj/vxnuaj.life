@@ -809,7 +809,7 @@ a:active { text-decoration: none;
 
 #favbooks a{
     position: relative;
-    top: 354px;
+    top: 854px;
     left: 440px;
     font-size: 20px;
     font-weight: 600;
@@ -833,7 +833,7 @@ a:active { text-decoration: none;
 
 #meditationsblck {
     position: absolute;
-    top: 434px;
+    top: 925px;
     left: 445px;
     height: 40px;
     width: fit-content;
@@ -892,7 +892,7 @@ a:active { text-decoration: none;
 
 #rcntmusic a{
     position: relative;
-    top: 741px;
+    top: 1190px;
     left: 440px;
     font-size: 20px;
     font-weight: 600;
@@ -913,7 +913,7 @@ a:active { text-decoration: none;
 
 #boneblck {
     position: absolute;
-    top: 434px;
+    top: 925px;
     left: 645px;
     height: 40px;
     width: fit-content;
@@ -983,6 +983,61 @@ a:active { text-decoration: none;
     transform: scale(1.05);
     transition: .3s;
 }
+
+/*/life.html images/*/
+.imgtxt{
+  position: absolute;
+  top: 330px;
+  left: 445px;
+  height: fit-content;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 600;
+  text-underline-offset: 3px;
+  animation: fade-down 1s;
+  margin: 10px
+}
+
+
+
+.image-container {
+  position: absolute;
+  left: 450px;
+  top: 410px;
+  width: 600px;
+  height: auto;
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(0px, 157px));
+  grid-auto-rows: minmax(0px, auto);
+  grid-gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.sample_img {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  padding: 0;
+  border-radius: 7px;
+  align-self: flex-start;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  transition: all 1s cubic-bezier(0.13, 0.95, 0, 1), transform 2s cubic-bezier(0.13, 0.95, 0, 1);
+  transform: perspective(500px) rotate3d(0, 1, 0, 0deg);
+  cursor: alias;
+}
+
+.sample_img:hover {
+  transform: perspective(500px) rotate3d(0, 1, .2, 25deg);
+}
+
+
+
+
+
+
 
 /*/ weather /*/
 
@@ -1133,7 +1188,7 @@ a:active { text-decoration: none;
       .now-playing {
         position: absolute;
         left: 445px; /* Adjust the positioning as per your requirements */
-        top: 850px; /* Adjust the positioning as per your requirements */
+        top: 1300px; /* Adjust the positioning as per your requirements */
         z-index: 1001;
         transition-duration: .25s;
       }
@@ -1247,7 +1302,7 @@ a:active { text-decoration: none;
       .now-playing.second-track {
         position: absolute;
         left: 655px; /* Adjust the positioning as per your requirements */
-        top: 850px; /* Adjust the positioning as per your requirements */
+        top: 1300px; /* Adjust the positioning as per your requirements */
         z-index: 1001;
       }
       
@@ -1342,7 +1397,7 @@ a:active { text-decoration: none;
       .now-playing.third-track {
         position: absolute;
         left: 865px; /* Adjust the positioning as per your requirements */
-        top: 850px; /* Adjust the positioning as per your requirements */
+        top: 1300px; /* Adjust the positioning as per your requirements */
         z-index: 1001;
       }
       
