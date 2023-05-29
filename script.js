@@ -7,6 +7,7 @@ const darkCursor ='url(images/cursors/dcursorlightning.svg), auto';
 document.addEventListener('DOMContentLoaded', function() {
   var accessKey = 'qRxI3zj6xJzWSMrZuKy1gP6LyFpxOrcdy5e53wfFNBs';
   var username = 'vxnuaj';
+  var imageLimit = 6; // Set the image limit to 6
 
   // Fetch image data from your personal Unsplash gallery
   fetch('https://api.unsplash.com/users/' + username + '/photos?client_id=' + accessKey)
@@ -18,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Display the images in the HTML
       var imageContainer = document.querySelector('.image-container');
-      for (var i = 0; i < data.length; i++) {
+      for (var i = 0; i < imageLimit && i < data.length; i++) { // Modify the for loop condition
         var img = document.createElement('img');
         img.src = data[i].urls.regular;
         img.width = 400;
@@ -41,7 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 //darkmode
+
+
 
 toggle.addEventListener('click', function() {
   this.classList.toggle('bi-sun');
@@ -51,9 +55,7 @@ toggle.addEventListener('click', function() {
   
   body.style.background = isDarkMode ? '#161616' : 'white';
   body.style.color = isDarkMode ? 'white' : 'black';
-  body.style.transition = '.2s';
   
-
   
   const audioName = "switch-20.wav";
   const audioVolume = 0.5;
@@ -71,19 +73,28 @@ toggle.addEventListener('click', function() {
   document.querySelector('#omdp2').style.color = isDarkMode ? "#a5b0c4" : "black";
   document.querySelector('.dpcrd').style.background = themeColor;
   document.querySelector('.dpcrd').style.borderColor = borderColor;
+  document.querySelector('#dpic').style.fill = isDarkMode ? "#7A7A7F":"black";
   document.querySelector('#ppcrd').style.background = themeColor;
   document.querySelector('#ppcrd').style.borderColor = borderColor;
+  document.querySelector('#ppic').style.fill = isDarkMode ? "#7A7A7F" : "black";
+  document.querySelector('#ppic').style.stroke = isDarkMode ? "#7A7A7F" : "black";
   document.querySelector('#pwcrd').style.background = themeColor;
   document.querySelector('#pwcrd').style.borderColor = borderColor;
+  document.querySelector('#pwic').style.fill = isDarkMode ? "#7A7A7F" : "black";
+  document.querySelector('#pwic').style.stroke = isDarkMode ? "#7A7A7F" : "black";
   document.querySelector('#synthexiacrd').style.background = themeColor;
   document.querySelector('#synthexiacrd').style.borderColor = borderColor;
+  document.querySelector('#synthexiaic').style.fill = isDarkMode ? "#7A7A7F" : "black";
+  document.querySelector('#synthexiaic').style.stroke = isDarkMode ? "#7A7A7F" : "black";
   document.querySelector('#ahcrd').style.background = themeColor;
   document.querySelector('#ahcrd').style.borderColor = borderColor;
+  document.querySelector('#ahic').style.fill = isDarkMode ? "#7A7A7F" : "black";
+  document.querySelector('#ahic').style.stroke = isDarkMode ? "#7A7A7F" : "black";
   
   const socialIcons = document.querySelectorAll('.socialicons svg');
   socialIcons.forEach(function(icon) {
     icon.style.fill = isDarkMode ? 'white' : 'black';
-    icon.style.transition = '.25s';
+    icon.style.transition = '.25';
   });
 
   const nowPlaying = document.querySelector('.nowplaying');
