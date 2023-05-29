@@ -75,7 +75,6 @@ function playSound(audioName, volume, duration) {
 
 
 //blog
-
 function displayBlogLinks() {
   const blogList = document.getElementById('blog-list');
 
@@ -95,8 +94,13 @@ function displayBlogLinks() {
         description.className = 'blog-description';
         description.textContent = blog.description;
 
+        const date = document.createElement('p');
+        date.className = 'blog-date';
+        date.textContent = formatDate(blog.date); // Display the formatted date
+
         listItem.appendChild(link);
         listItem.appendChild(description);
+        listItem.appendChild(date); // Append the date element to the list item
         blogList.appendChild(listItem);
       });
     })
@@ -107,6 +111,7 @@ function displayBlogLinks() {
 
 // Display blog links when the page loads
 window.addEventListener('DOMContentLoaded', displayBlogLinks);
+
 function displayBlogPost() {
   const blogContainer = document.getElementById('blog-container');
   const titleElement = document.getElementById('blog-title');
@@ -124,8 +129,13 @@ function displayBlogPost() {
       if (blogPost) {
         titleElement.textContent = blogPost.title;
         dateElement.textContent = formatDate(blogPost.date); // Display the formatted date
-        contentElement.innerHTML = blogPost.content;
 
+        // Apply italics, bold, and new lines formatting to the content
+        let formattedContent = blogPost.content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); // Convert **text** to <strong>text</strong>
+        formattedContent = formattedContent.replace(/\*(.*?)\*/g, '<em>$1</em>'); // Convert *text* to <em>text</em>
+        formattedContent = formattedContent.replace(/\n/g, '<br>'); // Convert \n to <br>
+
+        contentElement.innerHTML = formattedContent;
         blogContainer.style.display = 'block';
       } else {
         blogContainer.style.display = 'none';
@@ -144,6 +154,7 @@ function formatDate(dateString) {
 }
 
 window.addEventListener('DOMContentLoaded', displayBlogPost);
+
 
 
 
