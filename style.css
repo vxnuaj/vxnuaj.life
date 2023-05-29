@@ -12,7 +12,14 @@ body {
     overflow: scroll;
 }
 
-
+#gokuimg{
+  position:absolute;
+  top: 595px;
+  left: 1180px;
+  height: 140px;
+  width: auto;
+  transform: scaleX(-1);
+}
 .wrapper {
     position: relative;
     flex-direction: column;
@@ -29,6 +36,39 @@ body {
     background: #f5f5f5;
     z-index: 10;
 
+}
+
+#pcode {
+  position: relative;
+  left: 45px;
+  top: 590px;
+  font-size: 13px;
+  width: 148px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+#webgit {
+  position: relative;
+  left: 45px;
+  top: 600px;
+  font-size: 13px;
+  width: fit-content;
+  font-weight: 500;
+  line-height: 1.7;
+  font-style: italic;
+  transition: .2s;
+  opacity: 75%;
+}
+
+#webgit:hover {
+  transform: scale(1.10);
+    text-decoration: underline;
+    text-decoration-color: #FFC482;
+    color: #FFC482;
+    text-underline-offset: 1px;
+    cursor:pointer;
+    opacity: 100%;
 }
 
 .melol{
@@ -1143,7 +1183,7 @@ a:active { text-decoration: none;
 
 .thermometer {
     position: absolute;
-    left: 400px;
+    left: 403px;
     top: 4.5px;
 }
 

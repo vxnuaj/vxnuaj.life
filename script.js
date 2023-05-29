@@ -197,7 +197,7 @@ function renderWeather(weather){
   var temp = document.createElement("span");
 temp.setAttribute("id", "temperatureElement");
 temp.classList.add("weather-temp");
-temp.innerHTML = "feelin' like <span class='weather-temp-bold'>" + weather.main.temp + " F</span>";
+temp.innerHTML = "feelin' like <span class='weather-temp-bold'>" + weather.main.temp + "°F</span>";
 resultsContainer.append(temp);
 
   //p for weather description
