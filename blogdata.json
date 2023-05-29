@@ -11,7 +11,9 @@
       "id": 2,
       "title": "coming soon",
       "description": "someone help me convert an md file to json.",
-      "content": "someone help me convert an md file to json. \ni need to retain the md file formatting.\nplz"
+      "content": "someone help me convert an md file to json. \ni need to retain the md file formatting.\nplz",
+      "date" : "1999-12-31"  
+      
     },
 
     {
@@ -19,7 +21,7 @@
       "title": "coming soon",
       "description": "someone help me convert an md file to json.",
       "content": "someone help me convert an md file to json \ni need to retain the md file formatting. \nplz",
-      "date" : "december"
+      "date" : "1999-12-31" 
     }
   ]
   
