@@ -7,8 +7,6 @@ const darkCursor ='url(images/cursors/dcursorlightning.svg), auto';
 
 //darkmode
 
-
-
 toggle.addEventListener('click', function() {
   this.classList.toggle('bi-sun');
   this.classList.toggle('bi-moon');
