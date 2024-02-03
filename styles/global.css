@@ -28,3 +28,7 @@ blockquote {
   padding-left: 10px;           /* Adjust the padding as needed */
   margin-left: 0;               /* Adjust the margin as needed */
 }
+
+Link {
+  cursor: alias;
+}

@@ -1,10 +1,21 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import utilStyles from '../styles/utils.module.css';
+import kursor from 'kursor';
+import { useEffect } from 'react';
 
 
 export default function Home() {
+  useEffect(() => {
+    if (document.querySelector('.kursor') === null) {
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+      });
+    }
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -12,6 +23,7 @@ export default function Home() {
         <title>vxnuaj.life</title>
         <link rel="icon" href="/me.ico" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Serif:wght@400;700&display=swap"></link>
+        <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css"></link>
       </Head>
 
       <main>
@@ -36,6 +48,11 @@ export default function Home() {
         <p className = 'links'> 
           <b><Link href="/writing" className = {utilStyles.noUline}>Writing</Link> · <Link href = "/projects" className = {utilStyles.noUline}>Projects</Link> · <Link href = "/running" className = {utilStyles.noUline}>Running</Link></b>
         </p>
+        <div className = 'contico'>
+          <a href = "https://github.com/vxnuaj"><Image src="/gitico.svg" alt="Git Icon" width={20} height={20} margin-right = {10} /></a>
+          <a href = "https://twitter.com/vxnuaj"><Image src="/twitter.svg" alt="Twitter Icon" width={20} height={20} /></a>
+          <a href = "https://linkedin.com/in/vxnuaj"><Image src="/linkedin.svg" alt="Twitter Icon" width={20} height={20} /></a>
+        </div>
       </main>
 
       <style jsx>{`
@@ -71,35 +88,35 @@ export default function Home() {
         .des{ 
           opacity: 0;
           animation: fadeIn .8s ease-in-out;
-          animation-delay: 1.5s;
+          animation-delay: 2.5s;
           animation-fill-mode: forwards;
         }
 
         .des1{
           opacity: 0;
           animation: fadeIn .8s ease-in-out;
-          animation-delay: 4s;
+          animation-delay: 5s;
           animation-fill-mode: forwards;
         }
 
         .des2{
           opacity: 0;
           animation: fadeIn .8s ease-in-out;
-          animation-delay: 6.5s;
+          animation-delay: 7.5s;
           animation-fill-mode: forwards;
         }
 
         .updates{
           opacity: 0;
           animation: fadeIn .8s ease-in-out;
-          animation-delay: 9s;
+          animation-delay: 10s;
           animation-fill-mode: forwards;
         }
 
         .links {
           opacity: 0;
           animation: fadeIn .8s ease-in-out;
-          animation-delay: 11.5s;
+          animation-delay: 12.5s;
           animation-fill-mode: forwards;
         }
 
@@ -118,6 +135,18 @@ export default function Home() {
           position: relative;
           left: 25px;
           margin-bottom: 0px;
+        }
+
+        .contico{
+          opacity: 0;
+          animation: fadeIn .8s ease-in-out;
+          animation-delay: 13s;
+          animation-fill-mode: forwards;
+          position: relative;
+          left: 27px;
+          top: 20px;
+          display: flex;
+          gap: 10px; 
         }
 
         @media (max-width: 600px) {

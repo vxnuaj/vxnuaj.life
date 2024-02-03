@@ -3,14 +3,24 @@ import Head from 'next/head';
 import Date from '../../components/date';
 import writingStyles from '../../styles/writing.module.css'
 import utilStyles from '../../styles/utils.module.css'
-
 import {getSortedPostsData} from '../../lib/posts';
+import kursor from 'kursor';
+import { useEffect } from 'react';
 
 export default function Writing({ allPostsData }) {
+  useEffect(() => {
+    if (document.querySelector('.kursor') === null) {
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+      });
+    }
+  }, []);
   return (
     <>
       <Head>
         <title>Writing</title>
+        <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css"></link>
       </Head>
       <div className = {utilStyles.backButton}>
          ← <Link href = '/' className={utilStyles.noUline} > Back</Link>
