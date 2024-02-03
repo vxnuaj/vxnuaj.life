@@ -11,6 +11,7 @@ a {
 
 a:hover{
   text-decoration: underline;
+  cursor: alias;
 }
 
 * {
@@ -23,7 +24,7 @@ img {
 }
 
 blockquote {
-  border-left: 2px solid #333;  /* Adjust the color and size as needed */
+  border-left: 2px solid #000000;  /* Adjust the color and size as needed */
   padding-left: 10px;           /* Adjust the padding as needed */
   margin-left: 0;               /* Adjust the margin as needed */
 }
