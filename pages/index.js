@@ -140,7 +140,7 @@ export default function Home() {
         .contico{
           opacity: 0;
           animation: fadeIn .8s ease-in-out;
-          animation-delay: 13s;
+          animation-delay: 15s;
           animation-fill-mode: forwards;
           position: relative;
           left: 27px;
