@@ -9,6 +9,19 @@
     line-height: 25px;
 }
 
+.loading{
+    font-size: 40px;
+    font-style: italic;
+    font-family: 'Source Serif Pro', serif;
+    position: relative;
+    top: 150px;
+    left: 44%;
+    width: fit-content;
+    padding: 20px;
+    margin-bottom:200px;
+
+}
+
 .lifeMile{
     font-size: 19px;
     position: relative;
