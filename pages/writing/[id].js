@@ -8,14 +8,6 @@ import kursor from 'kursor';
 import { useEffect } from 'react';
 
 export async function getStaticProps({ params }) {
-  useEffect(() => {
-    if (document.querySelector('.kursor') === null) {
-      new kursor({
-        type: 1,
-        removeDefaultCursor: true,
-      });
-    }
-  }, []);
 
   const postData = await getPostData(params.id);
 
@@ -35,6 +27,14 @@ export async function getStaticPaths() {
   }
 
   export default function Post({ postData }) {
+    useEffect(() => {
+  if (document.querySelector('.kursor') === null) {
+    new kursor({
+      type: 1,
+      removeDefaultCursor: true,
+    });
+  }
+}, []);
     return (
       <Layout>
           <Head>
