@@ -23,7 +23,7 @@ export default function Writing({ allPostsData }) {
         <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css"></link>
       </Head>
       <div className = {utilStyles.backButton}>
-         ← <Link href = '/' className={utilStyles.noUline} > Back</Link>
+         ← <Link href = '/' className={utilStyles.noUline} >Back</Link>
       </div>
       <h1 className = {writingStyles.writHeading}>Writing</h1>
       <p className = {writingStyles.writDes}>I ship monthly updates via my Newsletter, publish articles on my curiosities <br></br> through Medium, and occasionally write some thoughts on this page.</p>

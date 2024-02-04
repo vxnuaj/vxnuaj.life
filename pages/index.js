@@ -146,7 +146,7 @@ export default function Home() {
           left: 27px;
           top: 20px;
           display: flex;
-          gap: 10px; 
+          gap: 20px; 
         }
 
         @media (max-width: 600px) {

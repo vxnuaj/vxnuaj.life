@@ -5,7 +5,7 @@
     font-family: 'Source Serif Pro', serif;
     position: relative;
     left: 30.5%;
-    top: 155px;
+    top: 150px;
     margin-bottom: 10px; /* Add some bottom margin for spacing */
     max-width: 600px;
   }
@@ -34,8 +34,10 @@
 
 .blogList {
     list-style: none;
+    padding: 0;
+    margin: 0;
     position: relative;
-    left: 27.5%;
+    left: 30.5%;
     top: 170px;
     max-width: 600px;
 }
@@ -52,3 +54,57 @@
     font-style: italic;
     max-width: 600px;
 }
+
+  /* Media query for smaller screens */
+  @media (max-width: 870px) {
+    .writHeading,
+    .writDes,
+    .writLinks,
+    .blogList,
+    .backButton {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      left: 100px;
+
+    }
+  }
+  
+  @media (max-width: 730px) {
+    .writHeading,
+    .writDes,
+    .writLinks,
+    .blogList,
+    .backButton {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      max-width: 550px;
+
+    }
+  }
+
+    
+  @media (max-width: 680px) {
+    .writHeading,
+    .writDes,
+    .writLinks,
+    .blogList,
+    .backButton {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      max-width: 400px;
+
+    }
+  }
+  @media (max-width: 680px) {
+    .writHeading,
+    .writDes,
+    .writLinks,
+    .blogList,
+    .backButton {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      left: 50px;
+      max-width: 400px;
+
+    }
+  }
