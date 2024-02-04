@@ -1,5 +1,263 @@
-.mileWeek{
-    font-size: 21px;
+.runDes1{
+    font-size: 16px;
+    font-style: italic;
+    font-family: 'Source Serif Pro', serif;
     position: relative;
-    left: 32.5%;
+    top: 150px;
+    left: 30.5%;
+    max-width: 600px;
+    line-height: 25px;
 }
+
+.lifeMile{
+    font-size: 19px;
+    position: relative;
+    left: 30.5%;
+    top: 170px;
+    margin-bottom: 0px;
+    padding: 0px;
+    line-height: 13px;
+    width: fit-content;
+}
+
+.ranMile {
+    font-size: 27px;
+    text-align: center;
+    font-weight: 550;
+}
+
+.lifeTime{
+    font-size: 19px;
+    position: relative;
+    left: 43.5%;
+    top: 90px;
+    margin-bottom: 0px;
+    padding: 0px;
+    line-height: 13px;
+    width: fit-content;
+    text-align: center;
+}
+
+.ranTime {
+    font-size: 27px;
+    font-weight: 550;
+}
+
+.lifeRan{
+    font-size: 19px;
+    position: relative;
+    left: 64.5%;
+    top: 10px;
+    margin-bottom: 0px;
+    padding: 0px;
+    line-height: 13px;
+    width: fit-content;
+    text-align: center;
+}
+
+.ranTotal {
+    font-size: 27px;
+    font-weight: 550;
+}
+
+.milePR{
+    font-size: 19px;
+    position: relative;
+    left: 42%;
+    top: 50px;
+    margin-bottom: 0px;
+    padding: 0px;
+    line-height: 13px;
+    width: fit-content;
+    text-align: center;
+}
+
+.mileTime {
+    font-size: 27px;
+    font-weight: 550;
+}
+
+.twomilePR{
+    font-size: 19px;
+    position: relative;
+    left: 55%;
+    top: -30px;
+    margin-bottom: 0px;
+    padding: 0px;
+    line-height: 13px;
+    width: fit-content;
+    text-align: center;
+}
+
+.twomileTime {
+    font-size: 27px;
+    font-weight: 550;
+}
+
+.runDes{
+    font-size: 16px;
+    font-family: 'Source Serif Pro', serif;
+    position: relative;
+    top: 0px;
+    left: 30.5%;
+    max-width: 600px;
+    line-height: 30px;
+}
+
+.runDes {
+  font-size: 16px;
+  font-family: 'Source Serif Pro', serif;
+  position: relative;
+  top: 0px;
+  left: 30.5%;
+  max-width: 600px;
+  line-height: 30px;
+}
+
+@media (max-width: 1060px){
+    .lifeRan{
+        position: relative;
+        left: 75%;
+    }
+    .lifeTime{
+        position: relative;
+        left: 48%;
+    }
+    .twomilePR{
+        position: relative;
+        left: 60%;
+    }
+    .milePR{
+        position: relative;
+        left: 45%;
+    }
+    .twomilePR{
+        position: relative;
+        left: 65%;
+    }
+}
+
+@media (max-width: 870px) {
+    .runDes1,
+    .runDes{
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      left: 100px;
+    }
+    .lifeMile{
+        position: relative;
+        left: 12%;
+        scale: .9;
+    }
+    .lifeTime{
+        position: relative;
+        left: 30%;
+        scale: .9;
+    }
+    .lifeRan{
+        position: relative;
+        left: 60%;
+        scale: .9;
+    }
+    .milePR{
+        position: relative;
+        left: 30%;
+        scale: .9;
+        top: 30px;
+    }
+    .twomilePR{
+        position: relative;
+        left: 50%;
+        scale: .9;
+        top: -50px;
+    }
+    .runDes{
+        position: relative;
+        top:-40px;
+    }
+  }
+
+
+@media (max-width: 730px) {
+    .runDes1,
+    .runDes {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      max-width: 550px;
+
+    }
+    .lifeMile{
+        position: relative;
+        left: 14%;
+        scale: .9;
+    }
+    .lifeTime{
+        position: relative;
+        left: 35%;
+        scale: .9;
+    }
+    .lifeRan{
+        position: relative;
+        left: 70%;
+        scale: .9;
+    }
+    .milePR{
+        position: relative;
+        left: 35%;
+        scale: .9;
+    }
+    .twomilePR{
+        position: relative;
+        left: 55%;
+        scale: .9;
+    }
+    .runDes{
+        position: relative;
+        top:-40px;
+    }
+  }
+
+
+@media (max-width: 680px) {
+    .runDes1,
+    .runDes {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      left: 50px;
+      max-width: 400px;
+    }
+
+    .lifeMile{
+        position: relative;
+        left: 42px;
+        scale: .7;
+    }
+    .lifeTime{
+        position: relative;
+        left:140px;
+        scale: .7;
+    }
+    .lifeRan{
+        position: relative;
+        left:350px;
+        scale: .7;
+    }
+    .milePR{
+        position: relative;
+        left: 150px;
+        scale: .7;
+        top: 5px;
+    }
+    .twomilePR{
+        position: relative;
+        left: 270px;
+        scale: .7;
+        top: -75px;
+    }
+    .runDes{
+        position: relative;
+        top:-70px;
+    }
+    
+
+  }

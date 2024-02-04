@@ -4,8 +4,6 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
-import kursor from 'kursor';
-import { useEffect } from 'react';
 
 
 export async function getStaticProps({ params }) {
@@ -27,14 +25,6 @@ export async function getStaticPaths() {
   }
 
   export default function Post({ postData }) {
-    useEffect(() => {
-      if (document.querySelector('.kursor') === null) {
-        new kursor({
-          type: 1,
-          removeDefaultCursor: true,
-        });
-      }
-    }, []);
     return (
       <Layout>
           <Head>

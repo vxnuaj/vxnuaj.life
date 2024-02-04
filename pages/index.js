@@ -3,19 +3,10 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
 import utilStyles from '../styles/utils.module.css';
-import kursor from 'kursor';
-import { useEffect } from 'react';
+
 
 
 export default function Home() {
-  useEffect(() => {
-    if (document.querySelector('.kursor') === null) {
-      new kursor({
-        type: 1,
-        removeDefaultCursor: true,
-      });
-    }
-  }, []);
 
   return (
     <div className={styles.container}>
