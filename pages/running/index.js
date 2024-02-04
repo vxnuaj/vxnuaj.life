@@ -3,11 +3,22 @@ import Link from 'next/link';
 import Head from 'next/head';
 import utilStyles from '../../styles/utils.module.css';
 import runStyles from '../../styles/running.module.css';
+import kursor from 'kursor';
+import { useEffect } from 'react';
 
 export default function Running() {
   const [runningData, setRunningData] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    if (document.querySelector('.kursor') === null) {
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+      });
+    }
+  }, []);
+  
   useEffect(() => {
     const fetchData = async () => {
       try {

@@ -4,8 +4,18 @@ import Date from '../../components/date';
 import writingStyles from '../../styles/writing.module.css'
 import utilStyles from '../../styles/utils.module.css'
 import {getSortedPostsData} from '../../lib/posts';
+import kursor from 'kursor';
+import { useEffect } from 'react';
 
 export default function Writing({ allPostsData }) {
+  useEffect(() => {
+    if (document.querySelector('.kursor') === null) {
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+      });
+    }
+  }, []);
   return (
     <>
       <Head>

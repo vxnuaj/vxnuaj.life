@@ -4,9 +4,19 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
-
+import kursor from 'kursor';
+import { useEffect } from 'react';
 
 export async function getStaticProps({ params }) {
+  useEffect(() => {
+    if (document.querySelector('.kursor') === null) {
+      new kursor({
+        type: 1,
+        removeDefaultCursor: true,
+      });
+    }
+  }, []);
+
   const postData = await getPostData(params.id);
 
   return {
