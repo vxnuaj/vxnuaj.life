@@ -4,7 +4,6 @@ import Head from 'next/head';
 import utilStyles from '../../styles/utils.module.css';
 import runStyles from '../../styles/running.module.css';
 import kursor from 'kursor';
-import { useEffect } from 'react';
 
 export default function Running() {
   const [runningData, setRunningData] = useState(null);
@@ -18,7 +17,7 @@ export default function Running() {
       });
     }
   }, []);
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
