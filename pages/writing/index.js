@@ -26,8 +26,8 @@ export default function Writing({ allPostsData }) {
          ← <Link href = '/' className={utilStyles.noUline} >Back</Link>
       </div>
       <h1 className = {writingStyles.writHeading}>Writing</h1>
-      <p className = {writingStyles.writDes}>I ship monthly updates via my Newsletter, publish articles on my curiosities <br></br> through Medium, and occasionally write some thoughts on this page.</p>
       <p className = {writingStyles.writLinks}><a href = 'https://vxnuaj.substack.com' className={utilStyles.noUline} >Newsletter</a> · <a href = 'https://medium.com/@vxnuaj' className={utilStyles.noUline}>Medium</a></p>
+      <p className = {writingStyles.writDes}>I ship monthly updates via my Newsletter, publish articles on my curiosities <br></br> through Medium, and occasionally write some thoughts on this page.</p>
       <p className = {writingStyles.writDes}>Hope you enjoy :)</p>
         <ul className = {writingStyles.blogList}>
           {allPostsData.map(({id, date, title }) => (
@@ -41,7 +41,6 @@ export default function Writing({ allPostsData }) {
             </li>
           ))}
         </ul>
-
     </>
   );
 }
