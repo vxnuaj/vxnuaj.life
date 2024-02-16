@@ -12,7 +12,7 @@ I built a Neurofeedback System, using OpenBCIs [Ganglion board](https://shop.ope
 
 With 4 EEG electrodes attatched (@ FP1, FP2, T5, T6), the Ganglion board collects raw EEG data. 
 
-The pipeline filters the data using a bandstop butterworth filter between 58-62 Hz and a bandpass filter between 11-31 Hz. 
+The pipeline filters the data using a bandstop butterworth filter between 58-62 Hz and a bandpass bessel filter between 11-31 Hz. 
 
 The filtered data is then classified using Brainflow's pretrained machine learning model to output a focus score.
 
