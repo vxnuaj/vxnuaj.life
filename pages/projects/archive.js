@@ -19,18 +19,17 @@ export default function Projects({ allProjData }) {
   return (
     <>
       <Head>
-        <title>Projects</title>
+        <title>Archive</title>
         <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css"></link>
       </Head>
       <div className = {utilStyles.backButton}>
          ← <Link href = '/' className={utilStyles.noUline} > Back</Link>
       </div>
-        <h1 className = {utilStyles.headingPost}>Projects</h1>
+        <h1 className = {utilStyles.headingPost}>Archive</h1>
         <p className = {writingStyles.writDes}>
-        I follow my curiosities with conviction, to go deep and build projects that pique my interest. <br></br>
-        I plan to scale this process up, for progress at the bleeding edge of technology. 
+        Just some older things I've worked on in the past.
         </p>
-          <ul className = {writingStyles.blogList}>
+          { /* <ul className = {writingStyles.blogList}>
             {allProjData.map(({projid, date, title }) => (
               <li className = {writingStyles.blogPost} key = {projid}>
                 <div className = {writingStyles.blogHeading}>
@@ -42,7 +41,7 @@ export default function Projects({ allProjData }) {
               </li>
             ))}
           </ul>
-          {/*<Link href = '/archive'>Archive</Link>*/}
+            <Link href = '/archive'>Archive</Link> */}
       </>
     );
 }

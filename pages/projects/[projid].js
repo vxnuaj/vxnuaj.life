@@ -6,6 +6,10 @@ import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
 import kursor from 'kursor';
 import { useEffect } from 'react';
+import remark from 'remark';
+import remarkMath from 'remark-math';
+import remarkHTML from 'remark-html';
+
 
 export async function getStaticProps({ params }) {
 
@@ -35,6 +39,7 @@ export async function getStaticPaths() {
     });
   }
 }, []);
+
     return (
       <Layout>
           <Head>
@@ -45,13 +50,13 @@ export async function getStaticPaths() {
         <div className = {utilStyles.backButton}>
          ← <Link href = '/projects' className={utilStyles.noUline} > Back</Link>
         </div>
-        <h1 className={utilStyles.headingProj}>{projData.title}</h1>
+        <h1 className={utilStyles.headingPost}>{projData.title}</h1>
         <br />
-        <div className = {utilStyles.projDate}>
+        <div className = {utilStyles.postDate}>
             <Date dateString={projData.date}/>
         </div>
         <br />
-        <div className = {utilStyles.projContent}>
+        <div className = {`${utilStyles.postContent} markdown-content`}>
         <div dangerouslySetInnerHTML={{ __html: projData.contentHtml }} />
         </div>
         </article>

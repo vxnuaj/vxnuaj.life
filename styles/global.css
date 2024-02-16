@@ -32,3 +32,12 @@ blockquote {
 Link {
   cursor: alias;
 }
+
+.markdown-content a {
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
