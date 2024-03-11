@@ -2,8 +2,8 @@ const visit = require('unist-util-visit');
 
 function plugin() {
   return (tree) => {
-    visit(tree, 'inlineCode', (node) => {
-      // Modify the inline code node here
+    visit(tree, 'code', (node) => {
+      node.type = 'html';
       node.value = `<span class="custom-code">${node.value}</span>`;
     });
   };
