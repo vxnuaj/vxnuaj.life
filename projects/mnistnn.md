@@ -3,6 +3,9 @@ title: 'Neural Network for MNIST using only NumPy'
 date: '2024-03-10'
 ---
 
+**[Github](https://github.com/vxnuaj/np.mnistnn) · [Article]() (cooming soon)**
+
+
 We will be building a neural network to classify digits from the MNIST dataset.
 
 MNIST training set consists of handwritten digits with a dimensionality of 28 by 28  pixels, amounting to a total of 784 pixel values. Each numerical pixel value ranges from 0 to 255, with 0 representing black and 255 representing white.
