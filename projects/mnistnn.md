@@ -3,7 +3,7 @@ title: 'Neural Network for MNIST using only NumPy'
 date: '2024-03-10'
 ---
 
-**[Github](https://github.com/vxnuaj/np.mnistnn) · [Article]() (cooming soon)**
+**[Github](https://github.com/vxnuaj/np.mnistnn) · [Article]() (coming soon)**
 
 
 We will be building a neural network to classify digits from the MNIST dataset.
