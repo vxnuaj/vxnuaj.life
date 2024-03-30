@@ -33,6 +33,11 @@ Link {
   cursor: alias;
 }
 
+Link:hover{
+  cursor: alias;
+  text-decoration: underline;
+}
+
 .markdown-content a {
   text-decoration: none;
   cursor: alias;
