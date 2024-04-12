@@ -34,7 +34,6 @@ Link {
 }
 
 Link:hover{
-  cursor: alias;
   text-decoration: underline;
 }
 

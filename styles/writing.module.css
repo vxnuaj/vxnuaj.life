@@ -31,6 +31,10 @@
     text-decoration: none;
 }
 
+.writLinks:hover{
+    text-decoration: none;
+}
+
 .blogList {
     list-style: none;
     padding: 0;
