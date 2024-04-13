@@ -14,7 +14,7 @@ import remarkHTML from 'remark-html';
 export async function getStaticProps({ params }) {
 
   const projData = await getProjData(params.projid);
-
+ 
   return {
     props: {
       projData,
