@@ -26,7 +26,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <p className= "intro" style = {{fontSize: '40px'}}>
+        <p className= "intro" style = {{fontSize: '30px'}}>
           agency is all u need.
         </p>
       </main>
