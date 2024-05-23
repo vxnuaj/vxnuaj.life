@@ -7,6 +7,14 @@
   align-items: center;
 }
 
+.intro {
+  font-size: 100px;
+  color: #000000;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'PT Serif', serif;
+}
+
 .title a {
   color: #0070f3;
   text-decoration: none;

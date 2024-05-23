@@ -6,7 +6,6 @@ import utilStyles from '../styles/utils.module.css';
 import kursor from 'kursor';
 import { useEffect } from 'react';
 
-
 export default function Home() {
   useEffect(() => {
     if (document.querySelector('.kursor') === null) {
@@ -27,9 +26,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <p className='intro'>
-          agency is all u need
+        <p className= "intro" style = {{fontSize: '40px'}}>
+          agency is all u need.
         </p>
       </main>
-      </div>
-  )}
+    </div>
+  );
+}
