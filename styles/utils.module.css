@@ -1,0 +1,99 @@
+.headingPost {
+    font-size: 30px;
+    font-weight: 500;
+    font-style: italic;
+    font-family: 'Source Serif Pro', serif;
+    position: relative;
+    left: 30.5%;
+    top: 150px;
+    margin-bottom: 10px; /* Add some bottom margin for spacing */
+    max-width: 600px;
+  }
+  
+  .postDate {
+    font-size: 16px;
+    font-style: italic;
+    font-family: 'PT Serif', serif;
+    position: relative;
+    top: 130px;
+    left: 30.5%;
+    margin-bottom: 0px; /* Adjust based on your preference */
+    max-width: 600px;
+  }
+  
+  .postContent {
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    position: relative;
+    left: 30.5%;
+    max-width: 600px;
+    width: 100%;
+    top: 110px;
+    line-height: 25px;
+  }
+
+  .backButton{
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    position: relative;
+    left: 30.5%;
+    top: 150px;
+    max-width: 600px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 870px) {
+    .headingPost,
+    .postDate,
+    .postContent,
+    .backButton {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      left: 100px;
+
+    }
+  }
+  
+  @media (max-width: 730px) {
+    .headingPost,
+    .postDate,
+    .postContent,
+    .backButton {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      max-width: 550px;
+
+    }
+  }
+
+    
+  @media (max-width: 680px) {
+    .headingPost,
+    .postDate,
+    .postContent,
+    .backButton {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      max-width: 400px;
+
+    }
+  }
+  @media (max-width: 680px) {
+    .headingPost,
+    .postDate,
+    .postContent,
+    .backButton {
+      position:relative; /* Remove relative positioning on smaller screens */
+      top: 150px;
+      left: 50px;
+      max-width: 400px;
+
+    }
+  }
+  
+.custom-code {
+    background-color: #62626245;
+    padding: 0.5em;
+    border-radius: 4px;
+  }
+  
